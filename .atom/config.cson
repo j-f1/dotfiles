@@ -1,0 +1,386 @@
+"*":
+  "Remote-FTP":
+    hideLocalWhenDisplayed: true
+  "activate-power-mode":
+    particles:
+      size: {}
+      spawnCount: {}
+      totalCount: {}
+    screenShake:
+      enabled: false
+  aligner:
+    ":-alignment": "left"
+    alignComments: true
+  "atom-clock":
+    dateFormat: "[ ]LT"
+    refreshInterval: 1
+    showClockIcon: true
+  "atom-easy-jsdoc":
+    beta: true
+    useReturns: true
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
+      formatOnType: false
+    "atom-ide-datatip":
+      datatipDebounceDelay: 100
+    "atom-ide-diagnostics-ui":
+      showDiagnosticTraces: true
+      showDirectoryColumn: true
+    "atom-ide-find-references":
+      defaultLocationForPane: "center"
+    use: {}
+  "atom-itunes":
+    itunesRefreshInterval: 100
+    showEqualizer: false
+    showNotes: true
+  "atom-jest-snippets":
+    toggleSemicolons: false
+  "atom-minify":
+    jsMinifier: "UglifyJS2"
+  "atom-minimap-titles":
+    font: "ANSI Shadow"
+  "atom-package-deps":
+    ignored: [
+      "linter-erb"
+      "linter-js-standard"
+    ]
+  "atom-typescript":
+    unusedAsInfo: false
+  "atom-webbrowser":
+    homepage: "https://www.duckduckgo.com"
+  "auto-copyright":
+    owner: "Jed Fox"
+    template: "Copyright © %y by %o."
+  "autocomplete-modules":
+    webpack: true
+  "autocomplete-plus": {}
+  "autocomplete-python":
+    extraPaths: "~/Webspace/.local/lib/python2.6/site-packages"
+    useKite: false
+    useSnippets: "required"
+  autoprefixer: {}
+  "bracket-matcher": {}
+  "browser-plus":
+    currentFile: false
+    homepage: "https://duckduckgo.com"
+  "character-table":
+    mnemonicAllowReversed: false
+  "color-picker":
+    preferredFormat: "HSL"
+    uppercaseColorValues: true
+  core:
+    automaticallyUpdate: false
+    closeDeletedFileTabs: true
+    customFileTypes:
+      "source.js": [
+        "js.snap"
+      ]
+      "source.json5": [
+        "babelrc"
+      ]
+      "source.ruby": [
+        "ev"
+      ]
+    debugLSP: true
+    disabledPackages: [
+      "background-tips"
+      "double-bond"
+      "metrics"
+      "tool-bar-main"
+      "diff-pane"
+      "markdown-preview"
+      "build"
+      "build-gulp"
+      "jsdoc-generator"
+      "django-templates"
+      "tool-bar"
+      "atom-minify"
+      "todo-manager"
+      "status-display"
+      "language-python"
+      "tester"
+      "linter-flake8"
+      "tree-view-git-branch"
+      "language-json"
+    ]
+    ignoredNames: [
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "*.pyc"
+    ]
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "iso8601-timestamp"
+      "terminal-plus"
+      "tool-bar-main"
+      "tool-bar"
+      "atom-live-server"
+      "language-git"
+      "linter-jshint"
+      "activate-power-mode"
+      "platformio-ide-terminal"
+      "allcontributors"
+    ]
+    projectHome: "~/atom-projects/"
+    restorePreviousWindowsOnStart: "always"
+    telemetryConsent: "limited"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
+    titleBar: "custom-inset"
+    warnOnLargeFileLimit: 5
+  "css-specificity": {}
+  "django-templates":
+    defaultToDjangoTemplatesForFilePathsContaining: [
+      "templates/"
+    ]
+  "double-tag": {}
+  editor:
+    backUpBeforeSaving: true
+    fontFamily: "Fira Code"
+    invisibles:
+      eol: " "
+      space: " "
+    nonWordCharacters: "/\\()\"':,.;<>~!@#%^&*|+=[]{}`?-…"
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "777b183b-ac39-9d28-a691-638aaf1fd4b4"
+  "export-html":
+    lineNumber: {}
+    openIn: "browser"
+  "file-hyperclick":
+    extension: ".js"
+  filesize:
+    KibibyteRepresentation: false
+  "flow-ide": {}
+  "fuzzy-finder":
+    ignoredNames: [
+      "node_modules"
+    ]
+    preserveLastSearch: true
+  "git-plus":
+    commits: {}
+    diffs:
+      wordDiff: true
+    experimental: {}
+    general:
+      _analyticsUserId: "cf3fb907-e237-4aef-b05a-53dd1a7cefcb"
+      splitPane: "Right"
+    remoteInteractions:
+      pullRebase: true
+  "git-status": {}
+  "highlight-selected":
+    hideHighlightOnSelectedWord: true
+  hyperclick: {}
+  "hyperlink-hyperclick": {}
+  "ide-flowtype":
+    tryFlowBin: true
+  "ide-python":
+    pylsPlugins:
+      jedi_symbols:
+        all_scopes: true
+      mccabe:
+        enabled: false
+      pycodestyle:
+        enabled: false
+      pydocstyle: {}
+      pyflakes:
+        enabled: false
+      yapf:
+        enabled: false
+  "ide-typescript": {}
+  "js-hyperclick":
+    extensions: [
+      ".js"
+      ".jsx"
+      ".json"
+      ".node"
+      ".ts"
+      ".tsx"
+    ]
+    usePendingPanes: true
+  "jsdoc-generator": {}
+  jumpy:
+    highContrast: true
+  "language-babel":
+    autoIndentJSX: true
+    taggedTemplateGrammar: [
+      "\"(?<=<style jsx>{)|(?<=<style jsx global>{)\":source.css.styled"
+    ]
+  "lcov-info":
+    coveredType: "Uncovered Lines Only"
+    highlightType: "gutter"
+  linter: {}
+  "linter-alex": {}
+  "linter-eslint":
+    eslintRulesDirs: [
+      "eslint-rules"
+    ]
+    fixOnSave: true
+    globalNodePath: "~/.nvm/versions/node/v8.9.0"
+    ignoreFixableRulesWhileTyping: true
+    rulesToDisableWhileFixing: [
+      "no-implicit-boolean-cast"
+    ]
+    rulesToSilenceWhileTyping: [
+      "no-trailing-spaces"
+      "eol-last"
+    ]
+    scopes: [
+      "source.js"
+      "source.jsx"
+      "source.js.jsx"
+      "source.babel"
+      "source.js-semantic"
+      "source.ts"
+      "source.tsx"
+    ]
+  "linter-flake8":
+    disableTimeout: true
+  "linter-js-standard":
+    checkStyleDevDependencies: true
+    lintHtmlFiles: true
+    lintMarkdownFiles: true
+    showEslintRules: true
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+    executablePath: "jshint"
+    lintInlineJavaScript: true
+    lintJSXFiles: true
+  "linter-pep8":
+    convertAllErrorsToWarnings: false
+  "linter-pylama":
+    interpreter: "python3"
+    pylamaVersion: "external"
+    usePep257: false
+    usePep8: false
+  "linter-pylint": {}
+  "linter-python":
+    executablePath: "/Library/Frameworks/Python.framework/Versions/3.5/bin/pylama"
+    lintTrigger: "File modified"
+    withMcCabe: true
+    withPep257: true
+    withPep8: true
+    withPyflakes: true
+    withPylint: true
+  "linter-tidy": {}
+  "linter-tslint":
+    enableSemanticRules: true
+  "linter-ui-default":
+    showPanel: true
+    tooltipFollows: "Keyboard"
+  "linter-write-good":
+    severityLevel: "Info"
+  "markdown-preview":
+    liveUpdate: false
+  "markdown-preview-plus":
+    mathConfig:
+      enableLatexRenderingByDefault: true
+    useGitHubStyle: true
+  minimap:
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      codeglance: false
+      codeglanceDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
+  "minimap-codeglance":
+    numberOfLines: 11
+  "one-light-ui": {}
+  "open-recent": {}
+  "package-reloader":
+    targets: [
+      "double-bond"
+    ]
+  pigments:
+    extendAutocompleteToColorValue: true
+    groupPaletteColors: "by file"
+    mergeColorDuplicates: true
+    sortPaletteColors: "by name"
+  "platformio-ide-terminal":
+    core:
+      scrollback: 10000000000
+    style:
+      theme: "inverse"
+    toggles:
+      runInsertedText: false
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      isDisabledIfNoConfigFile: true
+      showInStatusBar: true
+    prettierOptions:
+      singleQuote: true
+      trailingComma: "es5"
+    useStylelint: true
+  "python-jedi":
+    enablePython2: true
+  react: {}
+  "remove-whitespace": {}
+  "ruby-block":
+    showBottomPanel: false
+  "spell-check": {}
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  "svg-preview":
+    openPreviewAutomatically: true
+  teletype: {}
+  "terminal-plus":
+    core:
+      scrollback: 1000000000000000000
+    style:
+      theme: "inverse"
+    toggles:
+      autoClose: true
+      runInsertedText: false
+  "tool-bar":
+    iconSize: "12px"
+    visible: false
+  "tree-view":
+    autoReveal: true
+    hideIgnoredNames: true
+  "tree-view-autoresize":
+    delayMilliseconds: 0
+  "tree-view-filter": {}
+  "tree-view-git-branch": {}
+  "unity-ui":
+    colorStatusIndicatorsInTreeView: true
+    showIcons: true
+  welcome:
+    showOnStartup: false
+  "word-jumper": {}
+  "xatom-debug":
+    showToolbarIcon: false
+    toolbarStyle: "HeaderPanel"
+".apache-config.source":
+  editor:
+    autoIndentOnPaste: true
+    tabLength: 4
+".json.source":
+  editor:
+    softWrap: true

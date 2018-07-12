@@ -1,0 +1,98 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/using-atom-basic-customization#customizing-key-bindings
+# * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'body':
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-shift-tab': 'pane:show-previous-item'
+  'alt-cmd-right': 'pane:show-next-recently-used-item'
+  'alt-cmd-left': 'pane:show-previous-recently-used-item'
+  'ctrl-shift-tab ^ctrl': 'unset!'
+  'ctrl-tab ^ctrl': 'unset!'
+
+'atom-text-editor':
+  'ctrl-i': 'editor:auto-indent'
+
+  'cmd-alt-up': 'inc:inc'
+  'cmd-alt-down': 'inc:dec'
+
+'atom-workspace atom-text-editor:not([mini])[data-grammar^="source ts"]':
+  'ctrl-i': 'typescript:format-code'
+
+'atom-workspace':
+  'shift-cmd-U': 'iso8601-timestamp:utc'
+  'cmd-alt-t': 'tool-bar:toggle'
+  'ctrl-cmd-g': 'git-control:toggle'
+
+  'cmd-n': 'tree-view:add-file'
+  'cmd-alt-n': 'application:new-file'
+
+  'f18': 'allcontributors:transform'
+  # Key bindings for multi-cursor
+  'alt-x':                'multi-cursor-plus:mark'
+  'alt-up':               'multi-cursor-plus:move-up'
+  'alt-down':             'multi-cursor-plus:move-down'
+  'alt-left':             'multi-cursor-plus:move-left'
+  'alt-right':            'multi-cursor-plus:move-right'
+  'ctrl-alt-left':        'multi-cursor-plus:move-to-beginning-of-word'
+  'ctrl-alt-right':       'multi-cursor-plus:move-to-end-of-word'
+  'alt-home':             'multi-cursor-plus:move-to-first-character-of-line'
+  'alt-end':              'multi-cursor-plus:move-to-end-of-line'
+  'ctrl-alt-home':        'multi-cursor-plus:move-to-top'
+  'ctrl-alt-end':         'multi-cursor-plus:move-to-bottom'
+  'alt-shift-up':         'multi-cursor-plus:select-up'
+  'alt-shift-down':       'multi-cursor-plus:select-down'
+  'alt-shift-left':       'multi-cursor-plus:select-left'
+  'alt-shift-right':      'multi-cursor-plus:select-right'
+  'ctrl-alt-shift-left':  'multi-cursor-plus:select-to-beginning-of-word'
+  'ctrl-alt-shift-right': 'multi-cursor-plus:select-to-end-of-word'
+  'alt-shift-home':       'multi-cursor-plus:select-to-first-character-of-line'
+  'alt-shift-end':        'multi-cursor-plus:select-to-end-of-line'
+  'ctrl-alt-shift-home':  'multi-cursor-plus:select-to-top'
+  'ctrl-alt-shift-end':   'multi-cursor-plus:select-to-bottom'
+
+  'cmd-shift-3': 'atom-live-server:start-3000'
+  'cmd-shift-4': 'atom-live-server:start-4000'
+  'cmd-shift-5': 'atom-live-server:start-5000'
+  'cmd-shift-6': 'atom-live-server:start-6000'
+  'cmd-shift-7': 'atom-live-server:start-7000'
+  'cmd-shift-8': 'atom-live-server:start-8000'
+  'cmd-shift-9': 'atom-live-server:start-9000'
+
+  'f16': 'jsdoc-generator:out-tree'
+  'f13': 'jsdoc-generator:out'
+
+'.platform-darwin atom-text-editor:not([mini])':
+  'ctrl-i': 'editor:auto-indent'
+
+'.platform-darwin .terminal-plus .terminal':
+  'cmd-c': 'terminal-plus:copy'
+  'cmd-v': 'terminal-plus:paste'
+  'ctrl-enter': 'terminal-plus:insert-selected-text'
+
+'.tree-view':
+  'i': 'unset!'

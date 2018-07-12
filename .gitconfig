@@ -1,0 +1,28 @@
+[user]
+	email = git@twopointzero.us
+	signingkey = 0B61D18EA54B47E1
+	name = Jed Fox
+[core]
+	editor = /Applications/Text.app/Contents/MacOS/Text
+[push]
+	default = tracking
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	rescue = !git fsck --full --no-reflogs --unreachable --lost-found | grep commit | cut -d\\  -f3 | xargs -n 1 git log -n 1 --pretty=oneline > .git/lost-found.txt
+[diff]
+	compactionHeuristic = true
+[log]
+	follow = true
+[core "pager"]
+	bak = diff-so-fancy | less --tabs=2 -RFX
+[color]
+	ui = auto
+[credential]
+	helper = osxkeychain
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P

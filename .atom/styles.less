@@ -1,0 +1,557 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+/** TODO: Remove this once https://github.com/atom/one-light-syntax/issues/38 is closed */
+.syntax--ts {
+  .syntax--meta {
+    &.syntax--separator {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+}
+
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  // color: white;
+  // background-color: hsl(180, 24%, 12%);
+}
+
+// To style other content in the text editor's shadow DOM, use the ::shadow expression
+atom-text-editor::shadow .cursor {
+  // border-color: red;
+}
+
+.markdown-preview {
+  h1, h2, h3, h4, h5, h6 {
+    // color:blue !important;
+  }
+}
+
+.markdown-preview[data-use-github-style] .highlight {
+  margin-bottom: 0;
+}
+
+atom-text-editor {
+  .cursor {
+    transition: opacity 0.25s;
+  }
+}
+
+.no-title-bar:not(.fullscreen) {
+  @gradient: 10px;
+  .platformio-ide-terminal {
+    -webkit-app-region: no-drag !important;
+  }
+  .tree-view-resizer {
+    margin-top: -38px;
+    padding-top: 38px;
+    opacity: 1 !important;
+    .tree-view {
+      padding-top: @gradient;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 38px + @gradient;
+      width: calc(100% - 1px);
+      background: linear-gradient(to bottom, #ececec 38px, transparent);
+      z-index: 20;
+      -webkit-app-region: drag !important;
+      pointer-events: all;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 38px + @gradient;
+      box-shadow: inset -0.5px 0 0 0 rgba(0, 0, 0, 0.3);
+      pointer-events: none;
+      z-index: 2;
+    }
+  }
+}
+
+
+// .package-detail {
+//   padding-top: 1em;
+// }
+//
+// .package-detail .breadcrumb {
+//   position: absolute;
+//   z-index: 1;
+//   background-color: #fafafa;
+//   box-shadow: 0 5px 10px -10px black;
+//   width: 100%;
+//   top: 0;
+// }
+
+
+atom-workspace .browser-toolbar .omnibox-container .omnibox input {
+  padding-left: 2em;
+}
+
+// .tool-bar.tool-bar-vertical .btn:after {
+//   content: attr(data-original-title);
+//   display: block;
+//   width: 100%;
+//   text-align: center;
+//   left: 0;
+//   white-space: pre-line;
+//   line-height: 1;
+// }
+// .tool-bar-btn {
+//   margin-bottom: 3em !important;
+// }
+.tool-bar-24px.tool-bar-vertical {
+  width: 65px;
+  padding: 5px;
+}
+
+/*atom-pane .tab-bar {
+  .tab {
+    max-width: 22em !important;
+    .title, &.active .title {
+      padding: 0 28px;
+    }
+    .close-icon {
+      margin-left: 5px;
+    }
+
+    &::before {
+      transform: translateY(110%);
+      // opacity: 1;
+      width: 3px;
+      bottom: 0;
+    }
+    &.active {
+      &::before {
+        transform: translateY(0);
+      }
+    }
+  }
+}*/
+.tree-view-scroller[style="padding-bottom: 20px;"] {
+  padding-bottom: 27px !important;
+}
+
+/* Fira Code */
+@font-face {
+  font-family: Consolas;
+  src: local('Fira Code');
+}
+atom-text-editor, .terminal-plus, .markdown-preview code {
+  text-rendering: optimizeLegibility;
+}
+atom-text-editor .syntax--comment {
+  font-style: normal;
+}
+atom-text-editor {
+  font-feature-settings: "ss04" on;
+}
+
+autocomplete-python-suggestion {
+  font-family: inherit;
+}
+
+
+.itunes-container {
+  width: auto;
+  margin-right: 10px;
+}
+
+.title-bar-styling() {
+  height: 23px;
+  border-bottom: 1px solid @border;
+  border-top: 1px solid #F6F6F6;
+  background: linear-gradient(to bottom, hsl(0, 0%, 92%), hsl(0, 0%, 87%));
+  box-shadow:inset hsla(0, 0%, 100%, 0.5) 0 1px 1px;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid hsl(0, 0%, 74%);
+  color: hsl(0, 0%, 30%);
+
+  .is-blurred & {
+    background: #F6F6F6;
+    border-top-color: #FBFBFB;
+    color: #ACACAC;
+  }
+}
+
+/* TOOLBAR ♥️ TITLE BAR */
+body.fullscreen .title-bar {
+  margin-top: 0;
+}
+@border: #7E7E7E;
+@tool-bar-height: 23px;
+@tool-bar-button-height: @tool-bar-height - 4px;
+.tool-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+
+  justify-content: flex-end;
+  padding-left: 70px;
+
+  .tool-bar-btn, .tool-bar-spacer {
+    margin-top: 1px !important;
+    margin-bottom: 1px;
+  }
+  .tool-bar-btn {
+    width: @tool-bar-button-height !important;
+    height: @tool-bar-button-height !important;
+    &::before {
+      position: relative;
+      top: -3px;
+    }
+  }
+  .tool-bar-spacer {
+    height: @tool-bar-button-height !important;
+  }
+}
+
+atom-notifications {
+  top: auto;
+  right: auto;
+}
+/* END */
+
+
+.theme-native-ui {
+  & {
+    font-family: -apple-system, SF UI Text, San Fransico Text, San Francisco, Helvetica Neue, Helvetica, Segoe UI, sans-serif;
+  }
+  @border: #7E7E7E;
+  @blurred-border: #B7B7B7;
+  .title-bar {
+    cursor: default;
+    border-bottom: 1px solid @border;
+    border-top: 1px solid #F6F6F6;
+    background: linear-gradient(to bottom, #EBEBEB, #D3D3D3);
+    cursor: default;
+    border-radius: 5px 5px 0 0;
+    .is-blurred & {
+      background: #F6F6F6;
+      border-top-color: #FBFBFB;
+      color: #ACACAC;
+    }
+  }
+  atom-panel.modal atom-text-editor[mini] {
+    background: transparent;
+    border: none;
+  }
+  atom-panel.modal {
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.22), 0 4px 76px rgba(0, 0, 0, 0.3);
+  }
+
+  atom-pane,
+  // atom-text-editor,
+  atom-pane-container atom-pane .item-views .pane-item {
+    background: transparent !important;
+  }
+
+  atom-dock .tab-bar .tab .close-icon {
+    left: auto !important;
+  }
+
+  .expose-view {
+    .expose-top a {
+      color: white;
+    }
+    // .expose-tab.active {
+    //   border-color: #3498db;
+    //   .tab-header {
+    //     background: #3498db;
+    //     color: white;
+    //   }
+    //   .tab-body {
+    //     border: none;
+    //   }
+    // }
+  }
+  .tab-bar {
+    &:empty {
+      border: none;
+    }
+    border-color: @border;
+    border-radius: 0;
+    height: 23px;
+    line-height: 23px;
+    background: transparent;
+    .is-blurred & {
+      border-color: @blurred-border;
+    }
+    .tab {
+      .title, .close-icon {
+        margin-top: -1px;
+      }
+      background-image: linear-gradient(to bottom, hsl(0, 0%, 78%), hsl(0, 0%, 72%));
+      background-size: 100% 200%;
+      border-bottom: 1px solid hsl(0, 0%, 65%);
+      border-right-color: hsl(0, 0%, 59%);
+      color: rgba(0, 0, 0, 0.55);
+      box-shadow: none;
+      &.active {
+        border-top-color: hsl(0, 0%, 74%);
+        background-image: linear-gradient(to bottom, hsl(0, 0%, 87%), hsl(0, 0%, 82%));
+        background-size: 100% 100%;
+        color: hsla(0, 0%, 0%, 0.7);
+      }
+      .is-blurred & {
+        opacity: 1;
+        background: #ECECEC;
+        border-left-color: hsl(0, 0%, 85%);
+        border-top-color: hsl(0, 0%, 85%);
+
+        background-image: none;
+        background-color: hsl(0, 0%, 92%);
+
+        &:hover {
+          background-color: #E3E3E3;
+        }
+        &.active {
+          border-left-color: hsl(0, 0%, 85%);
+          border-top-color: hsl(0, 0%, 85%);
+
+          background-image: none;
+          background-color: hsl(0, 0%, 96%);
+        }
+      }
+      &.modified:not(:hover) .close-icon {
+        border: none;
+        background: #389dd4;
+      }
+    }
+  }
+  /* NO TITLE BAR * /
+  // Hide title
+  .title-bar {
+    display: none;
+  }
+
+  // Remove background from titlebar and toolbars
+  .title-bar,
+  .tool-bar,
+  .tool-bar button.tool-bar-btn {
+    background-color: transparent;
+    border-width: 0;
+  }
+
+  // Shift the tabs up
+  atom-workspace atom-workspace-axis.horizontal {
+    margin-top: -20px;
+  }
+
+  // Keep the side panels aligned
+  atom-panel-container{
+    &.left {
+      margin-top: 42px;
+    }
+    &.right {
+      margin-top: 10px;
+    }
+  }
+
+  .fullscreen {
+    atom-workspace atom-workspace-axis.horizontal {
+      margin-top: 0px;
+    }
+    atom-panel-container{
+      &.left {
+        margin-top: 0px;
+      }
+      &.right {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  // Avoid tabs from overlap window controls when sidebar is closed
+  atom-workspace atom-panel-container.left:empty + atom-workspace-axis.vertical .tab-bar {
+    margin-left: 70px;
+  }
+  /* END NO TITLE BAR */
+  atom-text-editor.mini, atom-text-editor[mini] {
+    &:not([data-grammar]), &[data-grammar~=null-grammar] {
+      font-family: inherit;
+      transition: box-shadow 0.15s ease-out, border 0.15s ease-out, border-radius 0.15s ease-out;
+      &:not(.is-focused) {
+        border-radius: 0;
+        border-color: #C0BFC0;
+      }
+    }
+  }
+  .btn {
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.2) inset;
+    border: none !important;
+  }
+  .btn.selected {
+    background-image: linear-gradient(to top, #2981FA, #72B3F6);
+  }
+  .btn:active {
+    background-image: linear-gradient(to top, #2268DF, #5599F8);
+    box-shadow: none;
+    color: white;
+  }
+  // .find-and-replace .find-meta-container {
+  //   top: 7px;
+  // }
+  linter-bottom-tab:nth-child(2) {
+    border-radius: 0;
+  }
+  linter-bottom-tab:first-child {
+    border-radius: 4px 0 0 4px;
+  }
+}
+
+.platformio-ide-terminal.status-bar {
+  position: relative;
+  margin-right: 0;
+}
+
+.theme-unity-ui {
+  .tab-bar {
+    height: 27px; // l’icon
+  }
+  .tab-bar .tab.active {
+    background: linear-gradient(#D2D0D2, #d7d5d7);
+  }
+  .tab-bar .tab.modified:not(:hover) .close-icon {
+    border: none;
+    background: #389dd4;
+  }
+  // .tab-bar .tab .title {
+  //   display: flex;
+  //   height: 22px;
+  //   justify-content: center;
+  //   align-items: baseline;
+  // }
+  .tab-bar .close-icon {
+    top: ~"calc(50% - (16px / 2))";
+  }
+  .tab-bar .tab .close-icon::before {
+    line-height: ~"calc(100% + 6px)";
+  }
+  .tab-bar .tab.modified .close-icon {
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  & {
+    font-family: SF UI Text;
+  }
+
+  autocomplete-suggestion-list .icon .icon-letter,
+  autocomplete-suggestion-list .word, autocomplete-suggestion-list .character-match {
+    font-family: Monaco;
+  }
+  // autocomplete-suggestion-list .character-match {
+  //   font-weight: bold;
+  // }
+
+  .remote-ftp-view .ftptree-view {
+    padding-left: 15px;
+  }
+  .remote-ftp-view > .offline > ul > li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .remote-ftp-view .queue {
+    border-top: 1px solid #B0B0B0;
+  }
+
+  .terminal-plus.status-bar {
+    margin: 0;
+    padding: 0 10px;
+  }
+  .select-list.popover-list .list-group {
+    border-radius: 0;
+  }
+
+  .modal.overlay {
+    top: 11em;
+  }
+  .modal.overlay::before {
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 0 0 0 1px;
+  }
+  atom-panel.modal .select-list ol.list-group li, atom-panel.modal.select-list ol.list-group li {
+    font-weight: normal;
+  }
+  .list-group .key-binding {
+    letter-spacing: 2px;
+  }
+
+  kbd {
+    font-family: SF UI Text;
+  }
+
+  .status-bar .status-bar-left,
+  .status-bar .status-bar-right {
+    overflow: visible;
+  }
+  .status-bar {
+    border-top: none;
+  }
+
+  .find-and-replace atom-text-editor {
+    font-family: Menlo;
+  }
+
+  // .linter-highlight:not(.badge) {
+  //   color: inherit;
+  // }
+  // .linter-highlight.status-success {
+  //   font-weight: bold;
+  // }
+  // .linter-highlight.status-success .icon::before {
+  //   color: #28bd3e;
+  // }
+  // .linter-highlight.status-error .icon::before {
+  //   color: #ff6158;
+  // }
+
+  // linter-bottom-tab {
+  //   background: linear-gradient(to top, darken(#FCFCFC, 10%), darken(#f6f6f6, 10%));
+  //   border: 1px solid #C1C1C1;
+  //   margin-top: -1px;
+  // }
+  // linter-bottom-tab:not(.active):active {
+  //   background: linear-gradient(to top, darken(#FCFCFC, 15%), darken(#f6f6f6, 15%));
+  // }
+  // linter-bottom-tab.active {
+  //   background: linear-gradient(#FCFCFC, #f6f6f6);
+  // }
+}
+@keyframes jmf-tooltip-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.tooltip {
+  animation: jmf-tooltip-in 0.2s !important;
+}

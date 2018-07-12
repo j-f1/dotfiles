@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "@warriorjs/cli": "^0.5.1",
+    "alm": "^2.38.1",
+    "bower": "^1.8.2",
+    "coffeescript": "^2.0.2",
+    "create-react-app": "^1.5.2",
+    "create-react-native-app": "^1.0.0",
+    "diff-so-fancy": "^1.1.1",
+    "docusaurus-init": "^1.0.1",
+    "dts-gen": "^0.5.7",
+    "eslint-cli": "^1.1.1",
+    "eslump": "^1.6.0",
+    "fkill-cli": "^4.1.0",
+    "generator-eslint": "^1.2.0",
+    "generator-eslint-config": "^2.0.2",
+    "generator-standard-readme": "^1.0.3",
+    "git-bc": "^1.2.2",
+    "github-spellcheck-cli": "^3.0.0",
+    "gulp": "^3.9.1",
+    "hotel": "^0.8.6",
+    "hpm-cli": "^2.0.1",
+    "localtunnel": "^1.8.3",
+    "lts": "^1.0.2",
+    "netlify-cli": "^1.2.2",
+    "npms-cli": "^1.6.0",
+    "pkglink": "^0.7.9",
+    "serve": "^6.3.1",
+    "trash-cli": "^1.4.0",
+    "watchman": "^0.1.8",
+    "yo": "^2.0.1"
+  }
+}

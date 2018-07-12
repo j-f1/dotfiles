@@ -1,0 +1,44 @@
+{
+  "dividers": {
+    "left": {
+      "hard": " ",
+      "soft": " "
+    },
+    "right": {
+      "hard": " ",
+      "soft": " "
+    }
+  },
+  "outer_padding": 0,
+  "segments": {
+    "left": [
+      {
+        "function": "powerline.segments.shell.mode"
+      },
+      {
+        "function": "powerline.segments.common.env.virtualenv",
+        "before": "℮ ",
+        "priority": 50
+      },
+      {
+        "type": "string",
+        "contents": "",
+        "draw_hard_divider": true,
+        "highlight_groups": ["cwd"]
+      }
+    ],
+    "right": [
+      {
+        "function": "powerline.segments.shell.last_pipe_status",
+        "before": "* ",
+        "after": " * ",
+        "priority": 10
+      },
+      {
+        "function": "powerline.segments.shell.jobnum",
+        "before": "╜ ",
+        "priority": 20
+      }
+    ]
+  }
+}
