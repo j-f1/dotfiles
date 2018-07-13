@@ -25,6 +25,7 @@
     "netlify-cli": "^1.2.2",
     "npms-cli": "^1.6.0",
     "pkglink": "^0.7.9",
+    "prettier": "^1.13.7",
     "serve": "^6.3.1",
     "trash-cli": "^1.4.0",
     "watchman": "^0.1.8",

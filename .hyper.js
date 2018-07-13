@@ -8,7 +8,8 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: 'Fira Code, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily:
+      'Fira Code, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BEAM',
@@ -43,7 +44,7 @@ module.exports = {
 
     // for environment variables
     env: {
-      HYPER_PASTE_SEPARATOR: '; and '
+      HYPER_PASTE_SEPARATOR: '; and ',
     },
 
     // set to false for no bell
@@ -61,8 +62,8 @@ module.exports = {
     // for advanced config flags please refer to https://hyper.is/#cfg
 
     hypercwd: {
-      initialWorkingDirectory: '~/Documents/Jed_Folder/github-clones'
-    }
+      initialWorkingDirectory: '~/Documents/Jed_Folder/github-clones',
+    },
   },
 
   // a list of plugins to fetch and install from npm
@@ -71,14 +72,19 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyperterm-paste", // "hyperterm-alternatescroll",
-  "hyperterm-tabs", "hyper-sync-settings", // "hyperlinks",
-  "hyper-one-light", // "hyper-statusline",
-  "~/Documents/Jed_Folder/github-clones/Forks/hyper-statusline", "hypercwd", // "hyper-native",
-  "hyper-final-say", "hyper-search"],
+  plugins: [
+    'hyperterm-paste', // "hyperterm-alternatescroll",
+    'hyperterm-tabs',
+    'hyper-sync-settings', // "hyperlinks",
+    'hyper-one-light', // "hyper-statusline",
+    '~/Documents/Jed_Folder/github-clones/Forks/hyper-statusline',
+    'hypercwd', // "hyper-native",
+    'hyper-final-say',
+    'hyper-search',
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: []
-};
+  localPlugins: [],
+}
