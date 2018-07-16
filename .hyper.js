@@ -2,6 +2,8 @@
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
 
+const home = require('os').homedir()
+
 module.exports = {
   config: {
     // default font size in pixels for all tabs
@@ -62,7 +64,7 @@ module.exports = {
     // for advanced config flags please refer to https://hyper.is/#cfg
 
     hypercwd: {
-      initialWorkingDirectory: '~/Documents/Jed_Folder/github-clones',
+      initialWorkingDirectory: home + '/Documents/Jed_Folder/github-clones',
     },
   },
 
@@ -77,7 +79,7 @@ module.exports = {
     'hyperterm-tabs',
     'hyper-sync-settings', // "hyperlinks",
     'hyper-one-light', // "hyper-statusline",
-    '~/Documents/Jed_Folder/github-clones/Forks/hyper-statusline',
+    home + '/Documents/Jed_Folder/github-clones/Forks/hyper-statusline',
     'hypercwd', // "hyper-native",
     'hyper-final-say',
     'hyper-search',
