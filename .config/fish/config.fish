@@ -97,7 +97,7 @@ end
 ######
 
 function md
-  pandoc $argv | lynx -stdin -lss ~/.config/lynx.lss
+  pandoc $argv | lynx -stdin -lss ~/.config/lynx.lss -display_charset=UTF-8
 end
 
 ##########
