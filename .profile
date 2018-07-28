@@ -13,6 +13,34 @@ export PATH
 alias python2.5=/Library/Frameworks/Python.framework/Versions/2.5/bin/python2.5 
 PATH="~/bin:${PATH}"
 
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 export PYTHONSTARTUP='/Users/'$USER'/python_profile.py'
 export VIRTUALENV_PROMPT='(\[\033[31m\]venv:\[\033[1m\]`basename \"$VIRTUAL_ENV\"`\033[00m\]) '
 
@@ -76,4 +104,3 @@ cd Documents/Jed_Folder/github-clones
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-
