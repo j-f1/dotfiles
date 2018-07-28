@@ -7,5 +7,8 @@
       "username": "j-f",
       "email": "git@twopointzero.us"
     }
+  },
+  "desktop": {
+    "updatedFrom": "3.9.0"
   }
 }
