@@ -4,11 +4,13 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
+brew "annie"
 brew "readline"
 brew "asciinema"
 brew "gettext"
 brew "autoconf"
 brew "automake"
+brew "bat"
 brew "carthage"
 brew "coreutils"
 brew "cowsay"
@@ -49,6 +51,7 @@ brew "libusb", args: ["universal"]
 brew "libusb-compat", args: ["universal"]
 brew "libgphoto2", args: ["universal"]
 brew "libicns", args: ["universal"]
+brew "libyaml"
 brew "lxc"
 brew "lynx"
 brew "makedepend"
@@ -94,5 +97,3 @@ mas "Trello", id: 1278508951
 mas "Xcode", id: 497799835
 mas "Xcode Old", id: 497799835
 mas "Xcode Older", id: 497799835
-mas "Xcode Older-er", id: 497799835
-mas "Xcode Older-er-er", id: 497799835
