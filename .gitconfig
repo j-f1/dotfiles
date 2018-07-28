@@ -3,7 +3,7 @@
 	email = git@twopointzero.us
 	signingkey = 0B61D18EA54B47E1
 [core]
-	editor = /Applications/Text.app/Contents/MacOS/Text
+	editor = nano
 [push]
 	default = tracking
 [filter "lfs"]
