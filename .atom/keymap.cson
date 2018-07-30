@@ -101,3 +101,6 @@
 
 '.tree-view':
   'i': 'unset!'
+
+'.platform-darwin atom-workspace atom-text-editor:not(.mini)':
+  'shift-cmd-C': 'color-picker:open'
