@@ -28,7 +28,24 @@
       showDirectoryColumn: true
     "atom-ide-find-references":
       defaultLocationForPane: "center"
-    use: {}
+    use:
+      "atom-ide-busy-signal": "always"
+      "atom-ide-code-actions": "always"
+      "atom-ide-code-format": "always"
+      "atom-ide-code-highlight": "always"
+      "atom-ide-console": "always"
+      "atom-ide-datatip": "always"
+      "atom-ide-debugger": "always"
+      "atom-ide-definitions": "always"
+      "atom-ide-diagnostics": "always"
+      "atom-ide-diagnostics-ui": "always"
+      "atom-ide-find-references": "always"
+      "atom-ide-global": "always"
+      "atom-ide-outline-view": "always"
+      "atom-ide-refactor": "always"
+      "atom-ide-signature-help": "always"
+      "atom-ide-terminal": "always"
+      hyperclick: "always"
   "atom-itunes":
     itunesRefreshInterval: 100
     showEqualizer: false
