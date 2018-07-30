@@ -21,7 +21,6 @@
   "atom-ide-ui":
     "atom-ide-code-format":
       formatOnSave: true
-      formatOnType: false
     "atom-ide-datatip":
       datatipDebounceDelay: 100
     "atom-ide-diagnostics-ui":
