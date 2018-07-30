@@ -119,6 +119,7 @@
       "linter-flake8"
       "tree-view-git-branch"
       "language-json"
+      "prettier-atom"
     ]
     ignoredNames: [
       ".hg"
@@ -323,6 +324,13 @@
       selectionDecorationsZIndex: 0
   "minimap-codeglance":
     numberOfLines: 11
+  mprettier:
+    formatOnSave:
+      enable: true
+      skipWhenPrettierConfigIsNotFound: true
+      skipWhenPrettierIsNotProjectDependencies: true
+    prettierToUseInOrder:
+      globallyInstalled: true
   "one-light-ui": {}
   "open-recent": {}
   "package-reloader":
