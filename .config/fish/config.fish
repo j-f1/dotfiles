@@ -3,12 +3,25 @@
 ##############
 eval (python -m virtualfish) # virtualenv
 
-#############
-# Powerline #
-#############
-set powerline_root /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages
-set fish_function_path $fish_function_path "$powerline_root/powerline/bindings/fish"
-powerline-setup
+##########
+# prompt #
+##########
+function fish_prompt
+  set_color -b brblack
+  echo -n ' '
+  set_color normal
+  set_color brblack
+  echo -n ' '
+  set_color normal
+end
+function fish_right_prompt
+  if test $status -ne 0
+    set_color -b 680000
+    set_color brwhite
+    echo -n " * $status * "
+    set_color normal
+  end
+end
 
 #######
 # pip #
