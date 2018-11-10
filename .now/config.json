@@ -1,14 +1,9 @@
 {
   "_": "This is your Now config file. See `now config help`. More: https://git.io/v5ECz",
   "updateChannel": "stable",
-  "sh": {
-    "user": {
-      "uid": "iq6Ki9KSJSdn5qTl1hxm7s0I",
-      "username": "j-f",
-      "email": "git@twopointzero.us"
-    }
-  },
   "desktop": {
-    "updatedFrom": "3.9.0"
+    "shownTips": {
+      "pasteFromClipboard": true
+    }
   }
 }

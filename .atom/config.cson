@@ -86,7 +86,6 @@
     preferredFormat: "HSL"
     uppercaseColorValues: true
   core:
-    automaticallyUpdate: false
     closeDeletedFileTabs: true
     customFileTypes:
       "source.js": [
@@ -115,11 +114,14 @@
       "todo-manager"
       "status-display"
       "language-python"
-      "tester"
       "linter-flake8"
       "tree-view-git-branch"
       "language-json"
-      "prettier-atom"
+      "tester-jest"
+      "tester"
+      "new-tab"
+      "tab-preview"
+      "mprettier"
     ]
     ignoredNames: [
       ".hg"
@@ -150,6 +152,7 @@
       "one-light-syntax"
     ]
     titleBar: "custom-inset"
+    useTreeSitterParsers: true
     warnOnLargeFileLimit: 5
   "css-specificity": {}
   "django-templates":
@@ -178,6 +181,7 @@
   filesize:
     KibibyteRepresentation: false
   "flow-ide": {}
+  "foldername-tabs": {}
   "fuzzy-finder":
     ignoredNames: [
       "node_modules"
@@ -241,12 +245,8 @@
     eslintRulesDirs: [
       "eslint-rules"
     ]
-    fixOnSave: true
     globalNodePath: "~/.nvm/versions/node/v8.9.0"
     ignoreFixableRulesWhileTyping: true
-    rulesToDisableWhileFixing: [
-      "no-implicit-boolean-cast"
-    ]
     rulesToSilenceWhileTyping: [
       "no-trailing-spaces"
       "eol-last"
@@ -331,6 +331,7 @@
       skipWhenPrettierIsNotProjectDependencies: true
     prettierToUseInOrder:
       globallyInstalled: true
+  "new-tab": {}
   "one-light-ui": {}
   "open-recent": {}
   "package-reloader":
@@ -373,6 +374,7 @@
     syncHorizontalScroll: true
   "svg-preview":
     openPreviewAutomatically: true
+  "tab-foldername-index": {}
   teletype: {}
   "terminal-plus":
     core:
@@ -382,6 +384,7 @@
     toggles:
       autoClose: true
       runInsertedText: false
+  "tester-jest": {}
   "tool-bar":
     iconSize: "12px"
     visible: false
