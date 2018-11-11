@@ -1,11 +1,20 @@
+set last_time (gdate "+%s%3N")
+function __s
+  echo (math (gdate "+%s%3N") - $last_time)
+  echo -n "Loading $argv... "
+  set last_time (gdate "+%s%3N")
+end
+
 ##############
 # virtualenv #
 ##############
-eval (python -m virtualfish) # virtualenv
+__s venv
+eval "eval (python -m virtualfish)" & # virtualenv
 
 ##########
 # prompt #
 ##########
+__s prompt
 function fish_prompt
   set_color -b brblack
   echo -n ' '
@@ -27,6 +36,7 @@ end
 #######
 # pip #
 #######
+__s pip
 function __fish_complete_pip
   set -lx COMP_WORDS (commandline -o) ""
   set -lx COMP_CWORD (math (contains -i -- (commandline -t) $COMP_WORDS)-1)
@@ -38,6 +48,7 @@ complete -fa "(__fish_complete_pip)" -c pip
 ########
 # less #
 ########
+__s l
 function l
   pygmentize -g -f terminal256 $argv | command less -R
 end
@@ -45,6 +56,7 @@ end
 ###############
 # Default cwd #
 ###############
+__s pwd
 if [ $PWD = $HOME ]
   cd Documents/Jed_Folder/github-clones
 end
@@ -52,13 +64,34 @@ end
 #######
 # npx #
 #######
+__s npx fallback
 # run npx by default when a command isn’t found
-source (npx --shell-auto-fallback fish | psub)
+# (result of npx --shell-auto-fallback)
+function __fish_command_not_found_on_interactive --on-event fish_prompt
+  functions --erase __fish_command_not_found_handler
+  functions --erase __fish_command_not_found_setup
+
+  function __fish_command_not_found_handler --on-event fish_command_not_found
+    if which npx > /dev/null
+        echo "$argv[1] not found. Trying with npx..." >&2
+    else
+        return 127
+    end
+    if string match -q -r @ $argv[1]
+        npx $argv
+    else
+        npx --no-install $argv
+    end
+  end
+
+  functions --erase __fish_command_not_found_on_interactive
+end
 
 ##############
 # npm Canary #
 ##############
 
+__s npm
 function npm
   if which -s npmc
     npmc $argv
@@ -78,18 +111,25 @@ end
 #########
 # pushd #
 #########
+__s pushd/popd
 function c
   pushd $argv
 end
 function pd
   popd $argv
 end
-rvm default
+
+#######
+# rvm #
+#######
+__s rvm
+rvm default &
 
 
 #########
 # TITLE #
 #########
+__s title
 function fish_title
   set name (basename (pwd))
   if [ "$_" = 'fish' ]
@@ -101,6 +141,7 @@ end
 
 
 # deprecated
+__s screen
 function screen
   echo "Use hotel instead!"
   command screen $argv
@@ -110,6 +151,7 @@ end
 # MD #
 ######
 
+__s md
 function md
   pandoc $argv | lynx -stdin -lss ~/.config/lynx.lss -display_charset=UTF-8
 end
@@ -118,8 +160,12 @@ end
 # Pipenv #
 ##########
 
+__s pipenv
 eval (pipenv --completion)
 
+__s electron-forge
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [ -f /Users/hayfields/.config/yarn/global/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.fish ]; and . /Users/hayfields/.config/yarn/global/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.fish
+
+__s done
