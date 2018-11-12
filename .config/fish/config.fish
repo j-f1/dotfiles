@@ -1,7 +1,3 @@
-##############
-# virtualenv #
-##############
-eval (python -m virtualfish) # virtualenv
 
 #######
 # pip #
