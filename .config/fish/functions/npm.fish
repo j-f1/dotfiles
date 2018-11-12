@@ -1,0 +1,1 @@
+/Users/hayfields/.config/fisherman/nvm/npm.fish
