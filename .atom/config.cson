@@ -162,7 +162,7 @@
   "double-tag": {}
   editor:
     backUpBeforeSaving: true
-    fontFamily: "Fira Code"
+    fontFamily: "Fira Code, monospace"
     invisibles:
       eol: " "
       space: " "
