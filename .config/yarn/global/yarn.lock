@@ -8660,6 +8660,10 @@ np@^3.0.4:
     terminal-link "^1.1.0"
     update-notifier "^2.1.0"
 
+now@^11.4.1:
+  version "11.4.1"
+  resolved "https://registry.yarnpkg.com/now/-/now-11.4.1.tgz#453c431fee618881e61d5447b9f0dc19ff1ffb79"
+
 npm-bundled@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.3.tgz#7e71703d973af3370a9591bafe3a63aca0be2308"
