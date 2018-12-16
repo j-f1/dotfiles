@@ -1,1 +1,38 @@
-include ~/.nano/syntax/ALL.nanorc
+include ~/.nano/syntax/*.nanorc
+# include /usr/local/share/nano/*.nanorc
+
+## Editing
+set afterends
+set autoindent
+set smarthome
+set wordchars $
+
+## Wrapping
+set softwrap
+set atblanks
+
+## App
+set mouse
+set multibuffer
+set smooth
+set suspend
+set speller aspell
+set positionlog
+
+## Keymap
+bind ^F "|prettier --parser typescript" main
+
+## Display
+set boldtext
+set linenumbers
+
+set titlecolor normal,white
+
+set numbercolor white
+set selectedcolor brightwhite,blue
+
+set errorcolor brightwhite,red
+set statuscolor brightwhite,green
+
+set functioncolor white
+set keycolor brightblack
