@@ -1,9 +1,10 @@
-# Defined in /Users/hayfields/.config/fish/config.fish @ line 127
+# Defined in /var/folders/5m/700gk8j97pb5btm8k4xczcg40000gn/T//fish.N5Q3fR/fish_title.fish @ line 2
 function fish_title
 	set name (basename (pwd))
-  if [ "$_" = 'fish' ]
+	set cmd (status current-command)
+  if [ "$cmd" = 'fish' ]
     echo $name
   else
-    echo $name '→' $_
+    echo $name '→' $cmd
   end
 end
