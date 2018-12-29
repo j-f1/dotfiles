@@ -20,7 +20,7 @@
     useReturns: true
   "atom-ide-ui":
     "atom-ide-code-format":
-      formatOnSave: true
+      formatOnType: false
     "atom-ide-datatip":
       datatipDebounceDelay: 100
     "atom-ide-diagnostics-ui":
@@ -97,7 +97,11 @@
         "js.snap"
       ]
       "source.json5": [
-        "babelrc"
+        "eslintrc"
+      ]
+      "source.less": [
+        "variables"
+        "overrides"
       ]
       "source.ruby": [
         "ev"
@@ -107,14 +111,12 @@
       "background-tips"
       "double-bond"
       "metrics"
-      "tool-bar-main"
       "diff-pane"
       "markdown-preview"
       "build"
       "build-gulp"
       "jsdoc-generator"
       "django-templates"
-      "tool-bar"
       "atom-minify"
       "todo-manager"
       "status-display"
@@ -157,7 +159,6 @@
       "one-light-syntax"
     ]
     titleBar: "custom-inset"
-    useTreeSitterParsers: true
     warnOnLargeFileLimit: 5
   "css-specificity": {}
   "django-templates":
@@ -250,6 +251,7 @@
     eslintRulesDirs: [
       "eslint-rules"
     ]
+    fixOnSave: true
     globalNodePath: "~/.nvm/versions/node/v8.9.0"
     ignoreFixableRulesWhileTyping: true
     rulesToSilenceWhileTyping: [
@@ -390,9 +392,7 @@
       autoClose: true
       runInsertedText: false
   "tester-jest": {}
-  "tool-bar":
-    iconSize: "12px"
-    visible: false
+  "tool-bar": {}
   "tree-view":
     autoReveal: true
     hideIgnoredNames: true

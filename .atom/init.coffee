@@ -11,7 +11,3 @@
 #     console.log "Saved! #{editor.getPath()}"
 
 # document.body.classList.add('an-old-hope-modify-ui')
-
-atom.workspace.observeTextEditors (editor) ->
-  if editor.getPath()?.match(/\.(variables|overrides)$/)
-    editor.setGrammar(atom.grammars.grammarForScopeName('text.less'))
