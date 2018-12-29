@@ -28,6 +28,11 @@
       showDirectoryColumn: true
     "atom-ide-find-references":
       defaultLocationForPane: "center"
+    "atom-ide-terminal":
+      cursorBlink: true
+      cursorStyle: "bar"
+      fontFamily: "Fira Code, courier-new, courier, monospace"
+      lineHeight: 1
     use:
       "atom-ide-busy-signal": "always"
       "atom-ide-code-actions": "always"
