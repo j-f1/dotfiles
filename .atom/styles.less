@@ -203,32 +203,41 @@ body.fullscreen .title-bar {
   margin-top: 0;
 }
 @border: #7E7E7E;
-@tool-bar-height: 23px;
-@tool-bar-button-height: @tool-bar-height - 4px;
+// @tool-bar-height: 23px; // hidden
+@tool-bar-height: 38px; // hidden-inset
+@tool-bar-icon-size: @tool-bar-height - 15px;
 .tool-bar {
   position: fixed;
   top: 0;
   right: 0;
-  background: transparent;
   border: none;
 
-  justify-content: flex-end;
+  justify-content: center;
   padding-left: 70px;
+  -webkit-app-region: drag;
 
   .tool-bar-btn, .tool-bar-spacer {
     margin-top: 1px !important;
     margin-bottom: 1px;
   }
   .tool-bar-btn {
-    width: @tool-bar-button-height !important;
-    height: @tool-bar-button-height !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: @tool-bar-height !important;
+    border-radius: 0;
+    border-top: none;
+    border-bottom: none;
     &::before {
+      font-size: @tool-bar-icon-size !important;
       position: relative;
-      top: -3px;
+      top: -5px;
     }
   }
   .tool-bar-spacer {
-    height: @tool-bar-button-height !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    -webkit-mask-image: none !important;
+    height: @tool-bar-height !important;
   }
 }
 
