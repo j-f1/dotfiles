@@ -6,6 +6,10 @@ const home = require('os').homedir()
 
 module.exports = {
   config: {
+    // choose either `'stable'` for receiving highly polished,
+    // or `'canary'` for less polished but more frequent updates
+    updateChannel: 'canary',
+
     // default font size in pixels for all tabs
     fontSize: 12,
 
@@ -19,7 +23,7 @@ module.exports = {
     // set to true for blinking cursor
     cursorBlink: true,
 
-    padding: -1,
+    padding: -2,
 
     // custom css to embed in the main window
     css: `
@@ -74,19 +78,15 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [
-    'hyperterm-paste', // "hyperterm-alternatescroll",
-    'hyperterm-tabs',
-    'hyper-sync-settings', // "hyperlinks",
-    'hyper-one-light',
-    '@j-f/hyper-statusline',
-    'hypercwd', // "hyper-native",
-    'hyper-final-say',
-    'hyper-search',
+  plugins: [// "hyperterm-alternatescroll",
+  // "hyperlinks",
+  // "hyper-native",
+  'hyperterm-paste', 'hyperterm-tabs', 'hyper-sync-settings', 'hyper-one-light', 'hypercwd', 'hyper-final-say', 'hyper-search', 
+  // "hyperpower"
   ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: [],
+  localPlugins: ["hyper-statusline1"],
 }
