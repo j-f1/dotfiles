@@ -31,7 +31,7 @@ complete -fa "(__fish_complete_pip)" -c pip
 ###############
 __s pwd
 if [ $PWD = $HOME ]
-  cd Documents/Jed_Folder/github-clones
+  cd Documents/github-clones
 end
 
 #######

@@ -2,8 +2,6 @@
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
 
-const home = require('os').homedir()
-
 module.exports = {
   config: {
     // choose either `'stable'` for receiving highly polished,
@@ -66,10 +64,6 @@ module.exports = {
     showHamburgerMenu: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
-
-    hypercwd: {
-      initialWorkingDirectory: home + '/Documents/Jed_Folder/github-clones',
-    },
   },
 
   // a list of plugins to fetch and install from npm
