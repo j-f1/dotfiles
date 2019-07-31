@@ -2,14 +2,14 @@ include ~/.nano/syntax/*.nanorc
 # include /usr/local/share/nano/*.nanorc
 
 ## Editing
-set afterends
+#set afterends
 set autoindent
 set smarthome
 set wordchars $
 
 ## Wrapping
 set softwrap
-set atblanks
+set nowrap
 
 ## App
 set mouse
