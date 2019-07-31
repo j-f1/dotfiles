@@ -7,6 +7,7 @@ module.exports = {
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
     updateChannel: 'canary',
+    webGLRenderer: true,
 
     // default font size in pixels for all tabs
     fontSize: 12,
@@ -28,6 +29,16 @@ module.exports = {
       /* .unicode-node { display: inline !important; } */
       .footer_footer .item_dirty:before { background-color: currentColor; }
       .footer_footer .item_dirty { color: #c18401; }
+      .tabs_nav { font-family: Fira Code; font-weight: 475 }
+
+      @font-face {
+        font-family: 'Fira Code';
+        src: url('https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/woff2/FiraCode-VF.woff2') format('woff2-variations'),
+             url('https://raw.githubusercontent.com/tonsky/FiraCode/master/distr/woff/FiraCode-VF.woff') format('woff-variations');
+        /* font-weight requires a range: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Using_a_variable_font_font-face_changes */
+        font-weight: 300 700;
+        font-style: normal;
+      }
     `,
     /* x-screen x-row { font-variant-ligatures: initial; } */
 
@@ -75,12 +86,12 @@ module.exports = {
   plugins: [// "hyperterm-alternatescroll",
   // "hyperlinks",
   // "hyper-native",
-  'hyperterm-paste', 'hyperterm-tabs', 'hyper-sync-settings', 'hyper-one-light', 'hypercwd', 'hyper-final-say', 'hyper-search', 
+  'hyperterm-paste', 'hyperterm-tabs', 'hyper-sync-settings', 'hyper-one-light', 'hypercwd', 'hyper-final-say', 'hyper-search',
   // "hyperpower"
   ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: ["hyper-statusline1"],
+  localPlugins: ["hyper-statusline"],
 }
