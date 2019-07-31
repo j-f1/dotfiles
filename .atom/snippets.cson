@@ -32,6 +32,15 @@
     'prefix': 'ir'
     'body': "import React from 'react'"
 
+'.source.css':
+  'Dark Mode Query':
+    'prefix': 'dark'
+    'body': """
+    @media (prefers-color-scheme: dark) {
+      $1
+    }
+    """
+
 '.source.python':
   'self':
     'prefix': 's.'

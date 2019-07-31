@@ -24,6 +24,7 @@
     "atom-ide-datatip":
       datatipDebounceDelay: 100
     "atom-ide-diagnostics-ui":
+      autoVisibility: true
       showDiagnosticTraces: true
       showDirectoryColumn: true
     "atom-ide-find-references":
@@ -65,6 +66,7 @@
     ignored: [
       "linter-erb"
       "linter-js-standard"
+      "linter-alex"
     ]
   "atom-typescript":
     unusedAsInfo: false
@@ -93,6 +95,12 @@
   core:
     closeDeletedFileTabs: true
     customFileTypes:
+      "source.diff": [
+        "patch"
+      ]
+      "source.gfm": [
+        "mdx"
+      ]
       "source.js": [
         "js.snap"
       ]
@@ -159,6 +167,7 @@
       "one-light-syntax"
     ]
     titleBar: "custom-inset"
+    useTreeSitterParsers: false
     warnOnLargeFileLimit: 5
   "css-specificity": {}
   "django-templates":
@@ -168,7 +177,8 @@
   "double-tag": {}
   editor:
     backUpBeforeSaving: true
-    fontFamily: "Fira Code, monospace"
+    fontFamily: "Fira Code, Menlo, Consolas, DejaVu Sans Mono, monospace"
+    fontSize: 15
     invisibles:
       eol: " "
       space: " "
@@ -204,6 +214,10 @@
     remoteInteractions:
       pullRebase: true
   "git-status": {}
+  github: {}
+  "highlight-bad-chars":
+    whitelist:
+      characters: "“”‘’–—"
   "highlight-selected":
     hideHighlightOnSelectedWord: true
   hyperclick: {}
@@ -242,22 +256,34 @@
     taggedTemplateGrammar: [
       "\"(?<=<style jsx>{)|(?<=<style jsx global>{)\":source.css.styled"
     ]
+  "language-dotenv":
+    dotenvFileNames: [
+      ".env"
+      ".env.production"
+      ".env.development"
+      ".env.test"
+      ".env.public"
+    ]
   "lcov-info":
     coveredType: "Uncovered Lines Only"
     highlightType: "gutter"
   linter: {}
   "linter-alex": {}
   "linter-eslint":
-    eslintRulesDirs: [
-      "eslint-rules"
-    ]
-    fixOnSave: true
-    globalNodePath: "~/.nvm/versions/node/v8.9.0"
-    ignoreFixableRulesWhileTyping: true
-    rulesToSilenceWhileTyping: [
-      "no-trailing-spaces"
-      "eol-last"
-    ]
+    advanced:
+      eslintRulesDirs: [
+        "eslint-rules"
+      ]
+    autofix:
+      fixOnSave: true
+      ignoreFixableRulesWhileTyping: true
+    disabling:
+      rulesToSilenceWhileTyping: [
+        "no-trailing-spaces"
+        "eol-last"
+      ]
+    global:
+      globalNodePath: "~/.nvm/versions/node/v8.9.0"
     scopes: [
       "source.js"
       "source.jsx"
@@ -301,8 +327,7 @@
   "linter-ui-default":
     showPanel: true
     tooltipFollows: "Keyboard"
-  "linter-write-good":
-    severityLevel: "Info"
+  "linter-write-good": {}
   "markdown-preview":
     liveUpdate: false
   "markdown-preview-plus":
@@ -360,12 +385,11 @@
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
-      isDisabledIfNoConfigFile: true
+      isDisabledIfNotInPackageJson: true
       showInStatusBar: true
     prettierOptions:
       singleQuote: true
       trailingComma: "es5"
-    useStylelint: true
   "python-jedi":
     enablePython2: true
   react: {}
@@ -394,8 +418,8 @@
   "tester-jest": {}
   "tool-bar": {}
   "tree-view":
-    autoReveal: true
     hideIgnoredNames: true
+    squashDirectoryNames: true
   "tree-view-autoresize":
     delayMilliseconds: 0
   "tree-view-filter": {}
