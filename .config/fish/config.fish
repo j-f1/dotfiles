@@ -1,9 +1,4 @@
-set last_time (gdate "+%s%3N")
-function __s
-  echo (math (gdate "+%s%3N") - $last_time)
-  echo -n "Loading $argv... "
-  set last_time (gdate "+%s%3N")
-end
+set start_time (gdate "+%s%3N")
 
 ##########
 # fisher #
@@ -17,7 +12,6 @@ end
 #######
 # pip #
 #######
-__s pip
 function __fish_complete_pip
   set -lx COMP_WORDS (commandline -o) ""
   set -lx COMP_CWORD (math (contains -i -- (commandline -t) $COMP_WORDS)-1)
@@ -29,7 +23,6 @@ complete -fa "(__fish_complete_pip)" -c pip
 ###############
 # Default cwd #
 ###############
-__s pwd
 if [ $PWD = $HOME ]
   cd Documents/github-clones
 end
@@ -37,7 +30,6 @@ end
 #######
 # npx #
 #######
-__s npx fallback
 # run npx by default when a command isn’t found
 # (result of npx --shell-auto-fallback)
 function __fish_command_not_found_on_interactive --on-event fish_prompt
@@ -63,19 +55,25 @@ end
 #######
 # rvm #
 #######
-__s rvm
-rvm default &
+## rvm default &
 
-##########
-# Pipenv #
-##########
 
-__s pipenv
-eval (pipenv --completion)
+# Startup performance
+set delta_t (math (gdate "+%s%3N") - $start_time)
 
-__s electron-forge
+if [ $delta_t -lt 100 ]
+  set perf_color green
+else if [ $delta_t -lt 500 ]
+  set perf_color yellow
+else
+  set perf_color red
+end
+
+set_color grey
+echo -n session started in (set_color --bold --dim $perf_color){$delta_t}ms(set_color normal; set_color grey)
+echo -n " on" (set_color normal; date -R)
+echo
+
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[ -f /Users/hayfields/.config/yarn/global/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.fish ]; and . /Users/hayfields/.config/yarn/global/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.fish
-
-__s done
+[ -f /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish ]; and . /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish
