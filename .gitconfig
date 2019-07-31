@@ -28,3 +28,5 @@
 	driver = npx npm-merge-driver merge %A %O %B %P
 [rebase]
 	autosquash = true
+[pull]
+	rebase = true
