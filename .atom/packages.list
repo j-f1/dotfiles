@@ -111,7 +111,6 @@ set-syntax@0.4.0
 sloc@1.1.2
 split-diff@1.6.0
 standardjs-snippets@2.6.2
-status-display@0.0.0
 svg-preview@0.14.0
 tab-foldername-index@3.3.1
 tab-preview@0.8.0
@@ -130,6 +129,5 @@ tree-view-git-branch@0.1.2
 true-xcode-syntax@0.2.0
 turbo-javascript@1.4.0
 underline-trailing-whitespace@1.4.2
-unicode-input@0.5.1
 word-jumper-deluxe@1.3.0
 

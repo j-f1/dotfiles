@@ -34,6 +34,7 @@
       cursorStyle: "bar"
       fontFamily: "Fira Code, courier-new, courier, monospace"
       lineHeight: 1
+    "debugger-exceptionBreakpointsCollapsed": false
     use:
       "atom-ide-busy-signal": "always"
       "atom-ide-code-actions": "always"
@@ -67,6 +68,7 @@
       "linter-erb"
       "linter-js-standard"
       "linter-alex"
+      "prettier-atom"
     ]
   "atom-typescript":
     unusedAsInfo: false
@@ -137,6 +139,9 @@
       "new-tab"
       "tab-preview"
       "mprettier"
+      "tool-bar-almighty"
+      "linter-rubocop"
+      "emmet"
     ]
     ignoredNames: [
       ".hg"
@@ -158,16 +163,12 @@
       "activate-power-mode"
       "platformio-ide-terminal"
       "allcontributors"
+      "mojave-dark-mode"
     ]
     projectHome: "~/atom-projects/"
     restorePreviousWindowsOnStart: "always"
     telemetryConsent: "limited"
-    themes: [
-      "one-light-ui"
-      "one-light-syntax"
-    ]
     titleBar: "custom-inset"
-    useTreeSitterParsers: false
     warnOnLargeFileLimit: 5
   "css-specificity": {}
   "django-templates":
@@ -178,7 +179,7 @@
   editor:
     backUpBeforeSaving: true
     fontFamily: "Fira Code, Menlo, Consolas, DejaVu Sans Mono, monospace"
-    fontSize: 15
+    fontSize: 13
     invisibles:
       eol: " "
       space: " "
@@ -203,6 +204,8 @@
       "node_modules"
     ]
     preserveLastSearch: true
+    scoringSystem: "fast"
+    useRipGrep: true
   "git-plus":
     commits: {}
     diffs:
@@ -263,6 +266,7 @@
       ".env.development"
       ".env.test"
       ".env.public"
+      ".env.sample"
     ]
   "lcov-info":
     coveredType: "Uncovered Lines Only"
@@ -356,6 +360,7 @@
       selectionDecorationsZIndex: 0
   "minimap-codeglance":
     numberOfLines: 11
+  "mojave-dark-mode": {}
   mprettier:
     formatOnSave:
       enable: true
@@ -405,6 +410,17 @@
     syncHorizontalScroll: true
   "svg-preview":
     openPreviewAutomatically: true
+  swackets:
+    colorParens: true
+    colors: [
+      "#000000"
+      "#662863"
+      "#0e3b5c"
+      "#139113"
+      "#8f8f00"
+      "#85370b"
+      "#d95959"
+    ]
   "tab-foldername-index": {}
   teletype: {}
   "terminal-plus":
@@ -421,7 +437,10 @@
     hideIgnoredNames: true
     squashDirectoryNames: true
   "tree-view-autoresize":
+    animationMilliseconds: 0
     delayMilliseconds: 0
+    minimumWidth: 144
+    padding: 23
   "tree-view-filter": {}
   "tree-view-git-branch": {}
   "unity-ui":
@@ -440,3 +459,9 @@
 ".json.source":
   editor:
     softWrap: true
+".racket.source":
+  editor:
+    nonWordCharacters: "\",'`()[]{}|;#"
+".scribble.source":
+  editor:
+    autoIndentOnPaste: true
