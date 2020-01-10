@@ -91,10 +91,12 @@ else
   set perf_color red
 end
 
-set_color grey
-echo -n session started in (set_color --bold --dim $perf_color){$delta_t}ms(set_color normal; set_color grey)
-echo -n " on" (set_color normal; date -R)
-echo
+if status --is-interactive
+  set_color grey
+  echo -n session started in (set_color --bold --dim $perf_color){$delta_t}ms(set_color normal; set_color grey)
+  echo -n " on" (set_color normal; date -R)
+  echo
+end
 
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
