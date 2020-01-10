@@ -24,6 +24,8 @@ module.exports = {
 
     padding: -2,
 
+    scrollback: 1e6,
+
     // custom css to embed in the main window
     css: `
       /* .unicode-node { display: inline !important; } */
@@ -86,9 +88,8 @@ module.exports = {
   plugins: [// "hyperterm-alternatescroll",
   // "hyperlinks",
   // "hyper-native",
-  'hyperterm-paste', 'hyperterm-tabs', 'hyper-sync-settings', 'hyper-one-light', 'hypercwd', 'hyper-final-say', 'hyper-search',
-  // "hyperpower"
-  ],
+  'hyperterm-paste', 'hyperterm-tabs', 'hyper-sync-settings', 'hyper-one-light', 'hypercwd', 'hyper-final-say', // "hyperpower"
+  'hyper-search'],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
