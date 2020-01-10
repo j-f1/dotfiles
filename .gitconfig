@@ -4,6 +4,7 @@
 	signingkey = 0B61D18EA54B47E1
 [core]
 	editor = nano
+	pager = diff-so-fancy | less --tabs=2 -RFX
 [push]
 	default = tracking
 [filter "lfs"]
@@ -17,8 +18,6 @@
 	compactionHeuristic = true
 [log]
 	follow = true
-[core "pager"]
-	bak = diff-so-fancy | less --tabs=2 -RFX
 [color]
 	ui = auto
 [credential]
