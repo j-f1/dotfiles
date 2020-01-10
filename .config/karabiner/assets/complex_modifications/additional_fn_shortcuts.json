@@ -1,0 +1,7 @@
+{
+  "title": "Caps Lock (Fn) + More Things™",
+  "rules": [
+    { "description": "Fn + Semicolon to Return",
+      "manipulators": [{"type": "basic", "from": {"key_code": "semicolon", "modifiers": {"mandatory": ["fn"], "optional": ["any"]}}, "to": [{"key_code": "return_or_enter"}]}] }
+  ]
+}
