@@ -30,3 +30,6 @@
 	autoStash = true
 [pull]
 	rebase = true
+[advice]
+	detachedHead = false
+	resolveConflict = false
