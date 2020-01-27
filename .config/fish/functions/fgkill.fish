@@ -1,4 +1,4 @@
-# Defined in /var/folders/r_/3vv7gfs93tg9xq8dfr83lfpm0000gn/T//fish.o5ZRH5/fgkill.fish @ line 2
+# Defined in /var/folders/r_/3vv7gfs93tg9xq8dfr83lfpm0000gn/T//fish.jURN09/fgkill.fish @ line 2
 function fgkill
 	set pid (jobs --last --pid)
 	set flag $argv[1]
@@ -7,4 +7,5 @@ function fgkill
 	else
 		kill $pid
 	end
+	fg $pid
 end

@@ -1,4 +1,4 @@
-# Defined in /var/folders/r_/3vv7gfs93tg9xq8dfr83lfpm0000gn/T//fish.Da9Vug/fish_title.fish @ line 2
+# Defined in /var/folders/r_/3vv7gfs93tg9xq8dfr83lfpm0000gn/T//fish.1Aap1n/fish_title.fish @ line 2
 function fish_title
 	set name (basename (pwd))
 	set cmd (status current-command)
