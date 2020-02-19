@@ -24,7 +24,6 @@
     "atom-ide-datatip":
       datatipDebounceDelay: 100
     "atom-ide-diagnostics-ui":
-      autoVisibility: true
       showDiagnosticTraces: true
       showDirectoryColumn: true
     "atom-ide-find-references":
@@ -137,11 +136,12 @@
       "tester-jest"
       "tester"
       "new-tab"
-      "tab-preview"
       "mprettier"
       "tool-bar-almighty"
-      "linter-rubocop"
       "emmet"
+      "ide-ruby"
+      "drag-relative-path"
+      "tab-preview"
     ]
     ignoredNames: [
       ".hg"
@@ -168,6 +168,10 @@
     projectHome: "~/atom-projects/"
     restorePreviousWindowsOnStart: "always"
     telemetryConsent: "limited"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
     titleBar: "custom-inset"
     warnOnLargeFileLimit: 5
   "css-specificity": {}
@@ -240,6 +244,8 @@
         enabled: false
       yapf:
         enabled: false
+  "ide-ruby":
+    lintLevel: "1"
   "ide-typescript": {}
   "js-hyperclick":
     extensions: [
@@ -421,7 +427,10 @@
       "#85370b"
       "#d95959"
     ]
-  "tab-foldername-index": {}
+  "tab-foldername-index":
+    equalsNamesEnabled: false
+  tabs:
+    enableVcsColoring: true
   teletype: {}
   "terminal-plus":
     core:
@@ -435,6 +444,7 @@
   "tool-bar": {}
   "tree-view":
     hideIgnoredNames: true
+    sortFoldersBeforeFiles: false
     squashDirectoryNames: true
   "tree-view-autoresize":
     animationMilliseconds: 0

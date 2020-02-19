@@ -219,6 +219,25 @@ atom-notifications {
 /* END */
 
 
+.tab-bar .tab .title {
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 0.66em
+}
+.smart-tab-name {
+  direction: ltr;
+  flex: 0;
+  -webkit-mask: none;
+  .folder {
+    opacity: 0.75;
+    .tab.active & {
+      opacity: 0.5;
+    }
+  }
+  .ellipsis { display: none }
+}
+
 .theme-native-ui {
   & {
     font-family: -apple-system, SF UI Text, San Fransico Text, San Francisco, Helvetica Neue, Helvetica, Segoe UI, sans-serif;
