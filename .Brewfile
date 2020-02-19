@@ -1,4 +1,6 @@
+tap "adoptopenjdk/openjdk"
 tap "buo/cask-upgrade"
+tap "github/gh"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -9,6 +11,7 @@ tap "homebrew/command-not-found"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "vitorgalvao/tiny-scripts"
+cask "adoptopenjdk8"
 cask "osxfuse"
 brew "annie"
 brew "openssl@1.1"
@@ -25,6 +28,7 @@ brew "gettext"
 brew "awscli"
 brew "bat"
 brew "carthage"
+brew "cocoapods"
 brew "cowsay"
 brew "ctags"
 brew "curl"
@@ -32,6 +36,7 @@ brew "docker", link: false
 brew "docker-compose", link: false
 brew "gnu-tar"
 brew "dpkg"
+brew "emacs"
 brew "fakeroot"
 brew "jpeg"
 brew "ffmpeg"
@@ -40,6 +45,7 @@ brew "format-udf"
 brew "fortune"
 brew "fswatch"
 brew "fzf"
+brew "git"
 brew "libassuan"
 brew "libgcrypt"
 brew "libksba"
@@ -71,10 +77,15 @@ brew "makedepend"
 brew "mas"
 brew "minica"
 brew "mitmproxy"
-brew "mysql", restart_service: true
+brew "mysql"
 brew "mysql-client"
 brew "nano"
 brew "ncdu"
+brew "opencv", link: false
+brew "opencv@2"
+brew "osmium-tool"
+brew "osmosis"
+brew "qt"
 brew "pdf2svg"
 brew "pipenv"
 brew "pkg-config"
@@ -82,7 +93,7 @@ brew "potrace"
 brew "pth"
 brew "pypy3"
 brew "qemu"
-brew "redis", restart_service: true
+brew "redis"
 brew "ruby"
 brew "sane-backends"
 brew "sdl2_ttf"
@@ -93,17 +104,21 @@ brew "travis"
 brew "unar"
 brew "unzip"
 brew "vcsh"
+brew "watchman"
 brew "wget"
 brew "wine"
 brew "yarn"
 brew "zlib"
+brew "github/gh/gh"
 brew "heroku/brew/heroku"
 brew "vitorgalvao/tiny-scripts/cask-repair"
 cask "0xed"
+cask "android-studio"
 cask "atom"
 cask "betterzip"
 cask "blender"
 cask "blockblock"
+cask "cutter"
 cask "do-not-disturb"
 cask "docker"
 cask "firefox"
@@ -116,8 +131,11 @@ cask "github"
 cask "gitter"
 cask "gitup"
 cask "google-chrome"
+cask "google-drive-file-stream"
 cask "google-earth-pro"
+cask "handbrake"
 cask "hyper"
+cask "iina"
 cask "java"
 cask "josm"
 cask "karabiner-elements"
@@ -125,6 +143,8 @@ cask "kextviewr"
 cask "keybase"
 cask "knockknock"
 cask "launchcontrol"
+cask "mactex"
+cask "mamp"
 cask "mojibar"
 cask "mysqlworkbench"
 cask "netiquette"
@@ -149,26 +169,35 @@ cask "signal"
 cask "sirimote"
 cask "skyfonts"
 cask "suspicious-package"
+cask "tableau"
+cask "themeengine"
 cask "uxprotect"
 cask "virtualbox"
 cask "vlc"
 cask "vscodium"
 cask "webpquicklook"
 cask "whatsyoursign"
+cask "wine-stable"
 cask "xquartz"
 mas "AdBlock", id: 1402042596
+mas "Battery Indicator", id: 1206020918
 mas "Caffeinated", id: 1362171212
 mas "Cascadea", id: 1432182561
 mas "Dato", id: 1470584107
+mas "DuckDuckGo Privacy Essentials", id: 1482920575
 mas "Dynaper", id: 1435296403
 mas "GarageBand", id: 682658836
-mas "GhosteryLite", id: 1436953057
 mas "Gifski", id: 1351639930
 mas "iMovie", id: 408981434
+mas "Input Sources", id: 1491836055
+mas "Pasteboard Viewer", id: 1499215709
 mas "PCalc", id: 403504866
 mas "PiPifier", id: 1160374471
 mas "Reeder", id: 1449412482
+mas "Shazam", id: 897118787
 mas "Slack", id: 803453959
+mas "Tampermonkey", id: 1482490089
 mas "Trello", id: 1278508951
 mas "Wayback Machine", id: 1472432422
+mas "XCFormat", id: 1165321484
 mas "Xcode", id: 497799835
