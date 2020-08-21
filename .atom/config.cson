@@ -68,6 +68,7 @@
       "linter-js-standard"
       "linter-alex"
       "prettier-atom"
+      "linter-swiftlint"
     ]
   "atom-typescript":
     unusedAsInfo: false
@@ -136,12 +137,13 @@
       "tester-jest"
       "tester"
       "new-tab"
-      "mprettier"
       "tool-bar-almighty"
       "emmet"
       "ide-ruby"
-      "drag-relative-path"
       "tab-preview"
+      "mprettier"
+      "jumpy"
+      "ide-typescript"
     ]
     ignoredNames: [
       ".hg"
@@ -168,10 +170,6 @@
     projectHome: "~/atom-projects/"
     restorePreviousWindowsOnStart: "always"
     telemetryConsent: "limited"
-    themes: [
-      "one-light-ui"
-      "one-light-syntax"
-    ]
     titleBar: "custom-inset"
     warnOnLargeFileLimit: 5
   "css-specificity": {}
@@ -187,6 +185,7 @@
     invisibles:
       eol: " "
       space: " "
+      tab: " "
     nonWordCharacters: "/\\()\"':,.;<>~!@#%^&*|+=[]{}`?-…"
     scrollPastEnd: true
     showIndentGuide: true
@@ -246,7 +245,9 @@
         enabled: false
   "ide-ruby":
     lintLevel: "1"
-  "ide-typescript": {}
+  "ide-typescript":
+    typeScriptServer:
+      path: "/usr/local/bin/tsserver"
   "js-hyperclick":
     extensions: [
       ".js"
@@ -337,7 +338,8 @@
   "linter-ui-default":
     showPanel: true
     tooltipFollows: "Keyboard"
-  "linter-write-good": {}
+  "linter-write-good":
+    severityLevel: "info"
   "markdown-preview":
     liveUpdate: false
   "markdown-preview-plus":
@@ -371,7 +373,6 @@
     formatOnSave:
       enable: true
       skipWhenPrettierConfigIsNotFound: true
-      skipWhenPrettierIsNotProjectDependencies: true
     prettierToUseInOrder:
       globallyInstalled: true
   "new-tab": {}
