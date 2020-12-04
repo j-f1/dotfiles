@@ -11,6 +11,7 @@
   aligner:
     ":-alignment": "left"
     alignComments: true
+  "atom-black": {}
   "atom-clock":
     dateFormat: "[ ]LT"
     refreshInterval: 1
@@ -69,6 +70,7 @@
       "linter-alex"
       "prettier-atom"
       "linter-swiftlint"
+      "minimap-linter"
     ]
   "atom-typescript":
     unusedAsInfo: false
@@ -102,6 +104,9 @@
       ]
       "source.gfm": [
         "mdx"
+      ]
+      "source.gitignore": [
+        "prettierignore"
       ]
       "source.js": [
         "js.snap"
@@ -143,7 +148,7 @@
       "tab-preview"
       "mprettier"
       "jumpy"
-      "ide-typescript"
+      "color-picker"
     ]
     ignoredNames: [
       ".hg"
@@ -166,10 +171,15 @@
       "platformio-ide-terminal"
       "allcontributors"
       "mojave-dark-mode"
+      "x86-assembly-highlighter"
     ]
     projectHome: "~/atom-projects/"
     restorePreviousWindowsOnStart: "always"
     telemetryConsent: "limited"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
     titleBar: "custom-inset"
     warnOnLargeFileLimit: 5
   "css-specificity": {}
@@ -185,7 +195,6 @@
     invisibles:
       eol: " "
       space: " "
-      tab: " "
     nonWordCharacters: "/\\()\"':,.;<>~!@#%^&*|+=[]{}`?-…"
     scrollPastEnd: true
     showIndentGuide: true
@@ -382,6 +391,8 @@
     targets: [
       "double-bond"
     ]
+  "pdf-view":
+    reverseSyncBehaviour: "Disabled"
   pigments:
     extendAutocompleteToColorValue: true
     groupPaletteColors: "by file"
@@ -398,6 +409,7 @@
     formatOnSaveOptions:
       enabled: true
       isDisabledIfNotInPackageJson: true
+      respectEslintignore: false
       showInStatusBar: true
     prettierOptions:
       singleQuote: true
@@ -467,6 +479,9 @@
   editor:
     autoIndentOnPaste: true
     tabLength: 4
+".fish.source":
+  editor:
+    tabType: "auto"
 ".json.source":
   editor:
     softWrap: true

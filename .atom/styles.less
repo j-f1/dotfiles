@@ -29,6 +29,14 @@ atom-text-editor, .terminal-plus, .markdown-preview code {
   }
 }
 
+.syntax--string.syntax--raw {
+  font-feature-settings: "zero", "onum", "ss04" /* $ */; /* remove \\ */
+}
+
+.datatip-marked-container {
+  font-feature-settings: "ss06", "ss07";
+}
+
 .theme-one-light-syntax .swackets- {
   &0 { color: inherit !important; }
   &1 { color: #662863 !important; }
