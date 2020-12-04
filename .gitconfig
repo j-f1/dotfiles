@@ -1,6 +1,6 @@
 [user]
 	name = Jed Fox
-	email = git@twopointzero.us
+	email = git@jedfox.com
 	signingkey = 0B61D18EA54B47E1
 [core]
 	editor = nano
@@ -20,8 +20,6 @@
 	follow = true
 [color]
 	ui = auto
-[credential]
-	helper = osxkeychain
 [merge "npm-merge-driver"]
 	name = automatically merge npm lockfiles
 	driver = npx npm-merge-driver merge %A %O %B %P
@@ -33,3 +31,13 @@
 [advice]
 	detachedHead = false
 	resolveConflict = false
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin//gpg
+[init]
+	defaultBranch = main
+[credential]
+	helper = manager-core
+[credential "https://dev.azure.com"]
+	useHttpPath = true
