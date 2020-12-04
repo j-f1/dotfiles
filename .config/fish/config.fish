@@ -74,9 +74,9 @@ end
 #########
 # pyenv #
 #########
-if command -v pyenv 1>/dev/null 2>&1
-  pyenv init - | source
-end
+# if command -v pyenv 1>/dev/null 2>&1
+#   pyenv init - | source
+# end
 
 
 
@@ -102,3 +102,4 @@ end
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [ -f /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish ]; and . /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish
 source /usr/local/opt/asdf/asdf.fish
+if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
