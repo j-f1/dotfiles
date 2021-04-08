@@ -1,0 +1,4 @@
+{
+  "pty.path" : "session",
+  "userShell" : "\/usr\/local\/bin\/fish"
+}
