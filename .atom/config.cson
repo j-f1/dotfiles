@@ -11,7 +11,8 @@
   aligner:
     ":-alignment": "left"
     alignComments: true
-  "atom-black": {}
+  "atom-black":
+    blackCommand: "/Users/jed/.asdf/installs/python/3.7.4/bin/black"
   "atom-clock":
     dateFormat: "[ ]LT"
     refreshInterval: 1
@@ -79,6 +80,8 @@
   "auto-copyright":
     owner: "Jed Fox"
     template: "Copyright © %y by %o."
+  "auto-dark-mode":
+    notifyOnChange: false
   "autocomplete-modules":
     webpack: true
   "autocomplete-plus": {}
@@ -131,7 +134,6 @@
       "build"
       "build-gulp"
       "jsdoc-generator"
-      "django-templates"
       "atom-minify"
       "todo-manager"
       "status-display"
@@ -148,7 +150,8 @@
       "tab-preview"
       "mprettier"
       "jumpy"
-      "color-picker"
+      "tree-view-filter"
+      "pdf-view-plus"
     ]
     ignoredNames: [
       ".hg"
@@ -256,7 +259,7 @@
     lintLevel: "1"
   "ide-typescript":
     typeScriptServer:
-      path: "/usr/local/bin/tsserver"
+      path: "/Users/jed/.asdf/shims/tsserver"
   "js-hyperclick":
     extensions: [
       ".js"
@@ -456,7 +459,7 @@
   "tester-jest": {}
   "tool-bar": {}
   "tree-view":
-    hideIgnoredNames: true
+    focusOnReveal: false
     sortFoldersBeforeFiles: false
     squashDirectoryNames: true
   "tree-view-autoresize":
