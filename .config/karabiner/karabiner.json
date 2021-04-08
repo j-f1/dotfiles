@@ -261,14 +261,6 @@
                     "to": {
                         "key_code": "fn"
                     }
-                },
-                {
-                    "from": {
-                        "key_code": "right_command"
-                    },
-                    "to": {
-                        "key_code": "n"
-                    }
                 }
             ],
             "virtual_hid_keyboard": {
