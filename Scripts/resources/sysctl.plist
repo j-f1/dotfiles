@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+ <key>Label</key>
+ <string>sysctl</string>
+ <key>ProgramArguments</key>
+ <array>
+ <string>/usr/sbin/sysctl</string>
+ <string>-w</string>
+ <string>net.inet.ip.ttl=65</string>
+ <string>net.inet6.ip6.hlim=65</string>
+ </array>
+ <key>RunAtLoad</key>
+ <true/>
+</dict>
+</plist>
