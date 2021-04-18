@@ -153,7 +153,9 @@
   "editor.accessibilitySupport": "off",
   "terminal.integrated.inheritEnv": false,
   "python.formatting.provider": "black",
-  "customizeUI.activityBarHideSettings": true,
   "window.titleBarStyle": "native",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "inline-parameters.fontStyle": "normal",
+  "inline-parameters.hideSingleParameters": true,
+  "customizeUI.statusBarPosition": "top"
 }
