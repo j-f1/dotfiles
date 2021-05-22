@@ -5,19 +5,27 @@ const match = {
    * @param {string} host
    * @returns {import("./.finicky-types").MatcherFunction}
    */
-  host: (host) => ({ url }) => url.host === host,
+  host:
+    (host) =>
+    ({ url }) =>
+      url.host === host,
   /**
    * @param {string} host
    * @param {string} path
    * @returns {import("./.finicky-types").MatcherFunction}
    */
-  path: (host, path) => ({ url }) =>
-    url.host === host && url.pathname.startsWith(path),
+  path:
+    (host, path) =>
+    ({ url }) =>
+      url.host === host && url.pathname.startsWith(path),
   /**
    * @param {string} protocol
    * @returns {import("./.finicky-types").MatcherFunction}
    */
-  protocol: (protocol) => ({ url }) => url.protocol === protocol,
+  protocol:
+    (protocol) =>
+    ({ url }) =>
+      url.protocol === protocol,
 };
 
 /**
