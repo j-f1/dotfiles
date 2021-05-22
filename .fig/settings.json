@@ -1,4 +1,10 @@
 {
+  "autocomplete.addStatusToTerminalTitle" : false,
+  "autocomplete.disable" : false,
+  "autocomplete.immediatelyRunDangerousCommands" : false,
+  "autocomplete.tab" : "insertOrPrefix",
+  "autocomplete.theme" : "auto",
+  "autocomplete.width" : 350,
   "pty.path" : "session",
   "userShell" : "\/usr\/local\/bin\/fish"
 }
