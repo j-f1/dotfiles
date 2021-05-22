@@ -75,7 +75,7 @@ module.exports = {
     },
     {
       match: match.protocol("discord"),
-      browser: "Discord",
+      browser: "Discord Canary",
     },
   ],
   rewrite: [
