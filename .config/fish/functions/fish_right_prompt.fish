@@ -1,5 +1,5 @@
-# Defined in /var/folders/r_/3vv7gfs93tg9xq8dfr83lfpm0000gn/T//fish.F4p0Xl/fish_right_prompt.fish @ line 2
 function fish_right_prompt
+  # set start_time (gdate "+%s%3N")
   set last_status $status
   if [ $last_status -ne 0 ]
     set_color brred
@@ -21,6 +21,8 @@ function fish_right_prompt
       set_color normal
     end
   end
+  # set delta_t (math (gdate "+%s%3N") - $start_time)
+  # echo -n $delta_t
 
   if [ -n "$VIRTUAL_ENV" ]
     set venv (basename $VIRTUAL_ENV)
