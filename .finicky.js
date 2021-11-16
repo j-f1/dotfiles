@@ -85,6 +85,10 @@ module.exports = {
       match: match.protocol("discord"),
       browser: "Discord Canary",
     },
+    {
+      match: match.host("www.courtlistener.com"),
+      browser: "Firefox",
+    },
   ],
   rewrite: [
     {
