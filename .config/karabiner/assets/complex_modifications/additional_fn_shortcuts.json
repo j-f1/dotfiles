@@ -1,7 +1,79 @@
 {
   "title": "Caps Lock (Fn) + More Things™",
   "rules": [
-    { "description": "Fn + Semicolon to Return",
-      "manipulators": [{"type": "basic", "from": {"key_code": "semicolon", "modifiers": {"mandatory": ["fn"], "optional": ["any"]}}, "to": [{"key_code": "return_or_enter"}]}] }
+    {
+      "description": "Fn + Semicolon to Backspace",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": ["fn"],
+              "optional": ["any"]
+            }
+          },
+          "to": [{ "key_code": "delete_or_backspace" }]
+        }
+      ]
+    },
+    {
+      "description": "Caps Lock → Fn or Cmd+Shift+P",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [{ "key_code": "fn", "lazy": true }],
+          "to_if_alone": [
+            {
+              "key_code": "p",
+              "modifiers": ["control", "option", "command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["paletro"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Caps Lock → Dismiss Paletro",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [{ "key_code": "fn", "lazy": true }],
+          "to_if_alone": [{ "key_code": "esc" }],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["paletro"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Disable Delete",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [{ "key_code": "vk_none" }]
+        }
+      ]
+    }
   ]
 }
