@@ -16,7 +16,8 @@
   ],
   "terminal.integrated.env.osx": {
     "EDITOR": "code -rw",
-    "TERM_PROGRAM": "vscode"
+    "TERM_PROGRAM": "vscode",
+    "FIG_NEW_SESSION": "1"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -36,40 +37,44 @@
   },
   "search.globalFindClipboard": true,
   "editor.renderLineHighlightOnlyWhenFocus": true,
-  "customizeUI.activityBar": "top",
+  "customizeUI.activityBar": "bottom",
   "customizeUI.titleBar": "inline",
   "customizeUI.stylesheet": {
-    ".notifications-toasts, .notifications-center": "bottom: auto !important; top: var(--traffic-lights-height); margin-top: var(--activity-bar-action-height);",
-    ".codicon-notifications-collapse, .codicon-notifications-expand, .notifications-center [title*='Hide Notifications']": "transform: scaleY(-1)",
-    // ".notifications-center [title*='Hide Notifications']::before": "content: '\\ea76' !important;",
-    ".monaco-workbench>.notifications-toasts .notification-toast-container>.notification-toast": "transform: translate3d(0,-100%,0)",
-    ".view-line *": "font-style: normal !important",
-    ".vs [style='color: rgb(255, 255, 255);'], .vs #workbench\\.parts\\.activitybar .action-item:hover [style^=color][style*='(255, 255, 255']:not(.badge-content)": "color: #424242 !important",
-    ".vs #workbench\\.parts\\.activitybar .action-item:hover [style^=background-color][style*='(255, 255, 255']:not(.badge-content)": "background-color: #424242 !important",
-    ".vs [style='background-color: rgba(255, 255, 255, 0.4);']:not(.select-box-dropdown-list-container):not(.badge-content), .vs [style='background-color: rgb(255, 255, 255);']:not(.select-box-dropdown-list-container):not(.badge-content)": "background-color: rgba(66, 66, 66, 0.4) !important",
-    ".vs .activitybar": "background: transparent !important",
-    ".composite.title .title-actions > * > * > .actions-container > .action-item:not(.grow) [role=button]:not(.disabled):hover::after": "content: ''; width: 24px; height: 24px; background: var(--background-highlight); display: inline-block; margin-left: -20px; margin-right: -4px; top: 4px; z-index: -1; border-radius: 50%; position: relative;",
-    "[role=application].vs-dark": "--background-highlight: #444",
-    "[role=application]": "--background-highlight: #ddd; margin-top: var(--traffic-lights-height); height: calc(100vh - var(--traffic-lights-height) + 22px) !important;",
+    // ".notifications-center [title*='Hide Notifications']::before": "content: '\\ea76' !important;"
+    //   ".view-line *": "font-style: normal !important",
+    //   ".vs [style='color: rgb(255, 255, 255);'], .vs #workbench\\.parts\\.activitybar .action-item:hover [style^=color][style*='(255, 255, 255']:not(.badge-content)": "color: #424242 !important",
+    //   ".vs #workbench\\.parts\\.activitybar .action-item:hover [style^=background-color][style*='(255, 255, 255']:not(.badge-content)": "background-color: #424242 !important",
+    //   ".vs [style='background-color: rgba(255, 255, 255, 0.4);']:not(.select-box-dropdown-list-container):not(.badge-content), .vs [style='background-color: rgb(255, 255, 255);']:not(.select-box-dropdown-list-container):not(.badge-content)": "background-color: rgba(66, 66, 66, 0.4) !important",
+    //   ".vs .activitybar": "background: transparent !important",
+    //   ".composite.title .title-actions > * > * > .actions-container > .action-item:not(.grow) [role=button]:not(.disabled):hover::after": "content: ''; width: 24px; height: 24px; background: var(--background-highlight); display: inline-block; margin-left: -20px; margin-right: -4px; top: 4px; z-index: -1; border-radius: 50%; position: relative;",
+    //   "[role=application].vs-dark": "--background-highlight: #444",
+    //   // "[role=application]": "--background-highlight: #ddd; margin-top: var(--traffic-lights-height); height: calc(100vh - var(--traffic-lights-height) + 22px) !important;",
     ".activitybar .content": "height: auto !important;",
-    ".dragging-area-top": "-webkit-app-region: no-drag !important;",
-    // ".dragging-area-left-padding": "width: 0 !important;",
-    "[aria-label='Remote Host']": "display: none !important",
-    ".monaco-workbench .part.statusbar.part.statusbar": "top: 0 !important; position: fixed !important; height: var(--traffic-lights-height) !important; background: transparent !important; color: inherit !important;",
-    ".nosidebar .part.editor": "top: -28px",
-    // ".nosidebar .part.statusbar": "padding-left: calc(3px + var(--traffict-lights-width));",
-    ".part.statusbar": "padding: 0 7px; padding-left: calc(3px + var(--traffict-lights-width)); -webkit-app-region: drag; outline: none !important",
-    ".statusbar-item, .statusbar-item": "padding-top: 7px; padding-bottom: 7px; height: calc(100% - 14px) !important; -webkit-app-region: no-drag;",
-    ".statusbar-item a:hover, .statusbar-item a:focus": "border-radius: 5px; background: var(--background-highlight) !important;",
-    ".monaco-workbench .part.statusbar>.items-container>.statusbar-item.right.last-visible-item": "padding-right: 0 !important;",
-    ".monaco-workbench .part.statusbar > .items-container > .statusbar-item.has-beak:before": "display: none",
-    ".activitybar *": "cursor: auto !important;",
-    ".activitybar .composite-bar": "width: 100%",
-    ".activitybar .actions-container": "justify-content: space-between !important",
-    ".sidebar, .sidebar > *": "transform: scaleY(-1)",
-    // ".sidebar .composite.title": "position: absolute; bottom: 15px; width: 100%",
-    ".sidebar .composite.title[style*='rgb(234, 234, 235)']": "background: #f3f3f3 !important",
-    ".sidebar .composite.title[style*='rgb(33, 37, 43)']": "background: #252526 !important"
+    //   ".dragging-area-top": "-webkit-app-region: no-drag !important;",
+    //   // ".dragging-area-left-padding": "width: 0 !important;",
+    //   "[aria-label='Remote Host']": "display: none !important",
+    //   // ".monaco-workbench .part.statusbar.part.statusbar": "top: 0 !important; position: fixed !important; height: var(--traffic-lights-height) !important; background: transparent !important; color: inherit !important;",
+    //   // ".nosidebar .part.editor": "top: -28px",
+    ".nosidebar .part.statusbar": "padding-left: calc(3px + var(--traffic-lights-width));",
+    ".part.statusbar": "padding: 0 7px; padding-left: calc(3px + var(--traffic-lights-width)); -webkit-app-region: drag; outline: none !important",
+    //   // ".statusbar-item, .statusbar-item": "padding-top: 7px; padding-bottom: 7px; height: calc(100% - 14px) !important; -webkit-app-region: no-drag;",
+    //   // ".statusbar-item a:hover, .statusbar-item a:focus": "border-radius: 5px; background: var(--background-highlight) !important;",
+    //   ".monaco-workbench .part.statusbar>.items-container>.statusbar-item.right.last-visible-item": "padding-right: 0 !important;",
+    //   ".monaco-workbench .part.statusbar > .items-container > .statusbar-item.has-beak:before": "display: none",
+    //   ".activitybar *": "cursor: auto !important;",
+    //   ".activitybar .composite-bar": "width: 100%",
+    //   ".activitybar .actions-container": "justify-content: space-between !important",
+    //   ".sidebar, .sidebar > *": "transform: scaleY(-1)",
+    //   // ".sidebar .composite.title": "position: absolute; bottom: 15px; width: 100%",
+    //   ".sidebar .composite.title[style*='rgb(234, 234, 235)']": "background: #f3f3f3 !important",
+    //   ".sidebar .composite.title[style*='rgb(33, 37, 43)']": "background: #252526 !important"
+    // fixes for insiders
+    ".activitybar": "width: auto !important",
+    ".monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-label": "width: 38px; height: 38px !important",
+    ".monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .action-item.checked .active-item-indicator:before": "border-left: none; border-bottom: 2px solid currentColor !important; width: 100% !important; height: 0 !important; bottom: 0",
+    ".actions-container": "justify-content: space-evenly",
+    ".monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .badge .badge-content": "top: 2px !important; right: 2px !important",
+    "[class=\"split-view-view visible\"][style=\"top: 0px; height: 28px;\"]": "display: none"
   },
   "liveshare.showInStatusBar": "whileCollaborating",
   "[jsonc]": {
@@ -114,7 +119,6 @@
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.editor.tabCloseButton": "left",
-  "workbench.editor.untitled.hint": "button",
   "explorer.incrementalNaming": "smart",
   "explorer.openEditors.sortOrder": "alphabetical",
   "search.actionsPosition": "auto",
@@ -136,8 +140,6 @@
   "git.allowNoVerifyCommit": true,
   "git.autofetch": false,
   "javascript.referencesCodeLens.enabled": true,
-  "typescript.implementationsCodeLens.enabled": true,
-  "typescript.referencesCodeLens.enabled": true,
   "git.confirmSync": false,
   "[python]": {
     "editor.defaultFormatter": "ms-python.python",
@@ -153,14 +155,12 @@
   "inline-parameters.fontStyle": "normal",
   "inline-parameters.hideSingleParameters": true,
   "customizeUI.statusBarPosition": "top",
-  "window.titleBarStyle": "native",
   "[ocaml]": {
     "editor.defaultFormatter": "ocamllabs.ocaml-platform"
   },
   "python.insidersChannel": "daily",
   "editor.formatOnPaste": true,
-  "workbench.productIconTheme": "sf-symbol-icons",
-  "sourcekit-lsp.serverPath": "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
+  "sourcekit-lsp.serverPath": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
   "sde.languageServerMode": "sourcekit-lsp",
   "[swift]": {
     "editor.defaultFormatter": "vknabel.vscode-swiftformat"
@@ -191,5 +191,8 @@
       "path": "pwsh",
       "icon": "terminal-powershell"
     }
-  }
+  },
+  "window.titleBarStyle": "native",
+  "workbench.productIconTheme": "sf-symbol-icons",
+  "prettier.requireConfig": true
 }
