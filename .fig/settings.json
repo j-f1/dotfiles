@@ -1,10 +1,17 @@
 {
-  "autocomplete.addStatusToTerminalTitle" : false,
-  "autocomplete.disable" : false,
-  "autocomplete.immediatelyRunDangerousCommands" : false,
-  "autocomplete.tab" : "insertOrPrefix",
-  "autocomplete.theme" : "auto",
-  "autocomplete.width" : 350,
-  "pty.path" : "session",
-  "userShell" : "\/usr\/local\/bin\/fish"
+  "app.beta": true,
+  "autocomplete.addStatusToTerminalTitle": false,
+  "autocomplete.disable": false,
+  "autocomplete.fontFamily": "Fira Code",
+  "autocomplete.height": 200,
+  "autocomplete.immediatelyRunDangerousCommands": false,
+  "autocomplete.keybindings.control+j": "navigateDown",
+  "autocomplete.keybindings.control+k": "navigateUp",
+  "autocomplete.keybindings.control+n": "navigateDown",
+  "autocomplete.keybindings.control+p": "navigateUp",
+  "autocomplete.tab": "insertOrPrefix",
+  "autocomplete.theme": "light",
+  "autocomplete.width": 350,
+  "pty.path": "/Users/jed/.swiftenv/shims:/Users/jed/.asdf/shims:/usr/local/Cellar/asdf/0.8.1_1/libexec/bin:/Users/jed/.config/nvm/10.16.0/bin:/usr/local/bin/:/usr/local/anaconda3/bin/:/usr/sbin:/Users/jed/.asdf/installs/rust/1.42.0/bin:/Users/jed/.fig/bin:/Users/jed/.yarn/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/VMware Fusion.app/Contents/Public:/Applications/Racket v7.3/bin:/Applications/Wireshark.app/Contents/MacOS",
+  "userShell": "/usr/local/bin/fish"
 }

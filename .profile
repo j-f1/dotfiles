@@ -1,3 +1,6 @@
+#### FIG ENV VARIABLES ####
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
 
 # Setting PATH for MacPython 2.5
 # The orginal version is saved in .bash_profile.pysave
@@ -104,3 +107,10 @@ cd Documents/Jed_Folder/github-clones
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+
+#### FIG ENV VARIABLES ####
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
+
+
