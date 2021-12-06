@@ -14,7 +14,6 @@ set nowrap
 ## App
 set mouse
 set multibuffer
-set smooth
 set suspend
 set speller aspell
 set positionlog
