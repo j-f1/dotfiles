@@ -7,8 +7,9 @@
   "window.clickThroughInactive": false,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "files.associations": {
-    "*.rkt": "alloy",
-    ".netlify.toml": "toml"
+    ".netlify.toml": "toml",
+    ".njk": "html",
+    ".69": "xml"
   },
   "terminal.integrated.commandsToSkipShell": [
     "workbench.action.nextEditorInGroup",
@@ -30,7 +31,7 @@
     "*.ipynb": "jupyter-notebook"
   },
   "python.showStartPage": false,
-  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDragAndDrop": true,
   "search.exclude": {
     "**/site-packages/**": true,
     "/var/**": true
@@ -148,7 +149,6 @@
   },
   "zenMode.hideStatusBar": false,
   "zenMode.silentNotifications": false,
-  "editor.accessibilitySupport": "off",
   "terminal.integrated.inheritEnv": false,
   "python.formatting.provider": "black",
   "editor.formatOnSave": true,
@@ -193,6 +193,33 @@
     }
   },
   "window.titleBarStyle": "native",
+  "prettier.requireConfig": true,
+  "[racket]": {
+    "editor.defaultFormatter": "evzen-wybitul.magic-racket"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": false,
+    "files.trimTrailingWhitespace": false
+  },
+  "cSpell.userWords": [
+    "ADOCH",
+    "camelcase",
+    "eleventy",
+    "Fordham",
+    "listify",
+    "MDAST",
+    "Nuxt",
+    "parens",
+    "rehype",
+    "subheaders",
+    "SUNY",
+    "uniqid",
+    "unist"
+  ],
+  "editor.accessibilitySupport": "off",
   "workbench.productIconTheme": "sf-symbol-icons",
-  "prettier.requireConfig": true
+  "editor.unicodeHighlight.allowedCharacters": {
+    "’": true
+  }
 }
