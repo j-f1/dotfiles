@@ -18,27 +18,76 @@
       ]
     },
     {
-      "description": "Caps Lock → Fn or Cmd+Shift+P",
+      "description": "Caps Lock → Fn and Command Palette",
       "manipulators": [
+        {
+          "type": "basic",
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps-lock",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["paletro"]
+            }
+          ],
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "caps-lock",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "p",
+              "modifiers": ["control", "option", "command"]
+            }
+          ]
+        },
         {
           "type": "basic",
           "from": {
             "key_code": "caps_lock",
             "modifiers": { "optional": ["any"] }
           },
-          "to": [{ "key_code": "fn", "lazy": true }],
-          "to_if_alone": [
+          "to": [
             {
-              "key_code": "p",
-              "modifiers": ["control", "option", "command"]
-            }
+              "set_variable": {
+                "name": "caps-lock",
+                "value": 1
+              }
+            },
+            { "key_code": "fn", "lazy": true }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["paletro"]
-            }
-          ]
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 300
+          },
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "caps-lock",
+                  "value": 0
+                }
+              }
+            ],
+            "to_if_canceled": [
+              {
+                "set_variable": {
+                  "name": "caps-lock",
+                  "value": 0
+                }
+              }
+            ]
+          }
         }
       ]
     },

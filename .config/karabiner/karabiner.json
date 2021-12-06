@@ -132,10 +132,15 @@
                         ]
                     },
                     {
-                        "description": "Caps Lock → Fn or Cmd+Shift+P",
+                        "description": "Caps Lock → Fn and Command Palette",
                         "manipulators": [
                             {
                                 "conditions": [
+                                    {
+                                        "name": "caps-lock",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
                                     {
                                         "bundle_identifiers": [
                                             "paletro"
@@ -153,8 +158,10 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "fn",
-                                        "lazy": true
+                                        "set_variable": {
+                                            "name": "caps-lock",
+                                            "value": 0
+                                        }
                                     }
                                 ],
                                 "to_if_alone": [
@@ -167,6 +174,50 @@
                                         ]
                                     }
                                 ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.to_delayed_action_delay_milliseconds": 300
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "caps-lock",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "key_code": "fn",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_delayed_action": {
+                                    "to_if_canceled": [
+                                        {
+                                            "set_variable": {
+                                                "name": "caps-lock",
+                                                "value": 0
+                                            }
+                                        }
+                                    ],
+                                    "to_if_invoked": [
+                                        {
+                                            "set_variable": {
+                                                "name": "caps-lock",
+                                                "value": 0
+                                            }
+                                        }
+                                    ]
+                                },
                                 "type": "basic"
                             }
                         ]
@@ -427,18 +478,7 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": true,
-            "simple_modifications": [
-                {
-                    "from": {
-                        "key_code": "left_arrow"
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_control"
-                        }
-                    ]
-                }
-            ],
+            "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "indicate_sticky_modifier_keys_state": true,
