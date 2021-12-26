@@ -78,7 +78,15 @@ end
 #   pyenv init - | source
 # end
 
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[ -f /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish ]; and . /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish
+source /opt/homebrew/opt/asdf/asdf.fish
 
+############
+# swiftenv #
+############
+if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
 
 # Startup performance
 set delta_t (math (gdate "+%s%3N") - $start_time)
@@ -97,9 +105,3 @@ if status --is-interactive
   echo -n " on" (set_color normal; date -R)
   echo
 end
-
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[ -f /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish ]; and . /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish
-source /opt/homebrew/opt/asdf/asdf.fish
-if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
