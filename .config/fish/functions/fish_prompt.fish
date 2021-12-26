@@ -1,5 +1,8 @@
-# Defined in /var/folders/r_/3vv7gfs93tg9xq8dfr83lfpm0000gn/T//fish.awQUec/fish_prompt.fish @ line 2
 function fish_prompt
+	set_color bbb
+	echo -n (string repeat -n "$fish_nesting_level" '█')
+	set_color normal
+
 	if [ $USER = 'root' ]
 		echo -n '🩸 '
 	else

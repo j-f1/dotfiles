@@ -88,6 +88,15 @@ source /opt/homebrew/opt/asdf/asdf.fish
 ############
 if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
 
+###########
+# nesting #
+###########
+if set -q fish_nesting_level
+  set -gx fish_nesting_level (math $fish_nesting_level + 1)
+else
+  set -gx fish_nesting_level 0
+end
+
 # Startup performance
 set delta_t (math (gdate "+%s%3N") - $start_time)
 
