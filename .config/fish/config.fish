@@ -101,5 +101,5 @@ end
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [ -f /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish ]; and . /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish
-source /usr/local/opt/asdf/asdf.fish
+source /opt/homebrew/opt/asdf/asdf.fish
 if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end

@@ -126,7 +126,6 @@
   "search.quickOpen.includeSymbols": true,
   "scm.alwaysShowActions": true,
   "extensions.closeExtensionDetailsOnViewChange": true,
-  "terminal.integrated.automationShell.osx": "/bin/zsh",
   "terminal.integrated.enableBell": true,
   "terminal.integrated.fontWeight": 500,
   "terminal.integrated.minimumContrastRatio": 4.5,
@@ -171,7 +170,6 @@
   },
   "editor.largeFileOptimizations": false,
   "inline-parameters.enabled": false,
-  "terminal.integrated.shell.osx": "fish",
   "terminal.integrated.profiles.osx": {
     "bash": {
       "path": "bash",
@@ -181,7 +179,7 @@
       "path": "zsh"
     },
     "fish": {
-      "path": "fish"
+      "path": ["fish", "/opt/homebrew/bin/fish"]
     },
     "tmux": {
       "path": "tmux",
@@ -222,4 +220,8 @@
   "editor.unicodeHighlight.allowedCharacters": {
     "’": true
   }
+  "terminal.integrated.automationProfile.osx": {
+    "path": "zsh"
+  },
+  "terminal.integrated.defaultProfile.osx": "fish",
 }

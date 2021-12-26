@@ -91,7 +91,7 @@ export PS1="\033[34mbash\033[39m\033[90m:\033[39m \033[32m\W$(__git_ps1 " (%s)")
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-export PATH=/usr/local/bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 
 # nvm use --silent default
 alias git=hub
@@ -114,3 +114,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 #### END FIG ENV VARIABLES ####
 
 
+. $HOME/.asdf/asdf.sh
