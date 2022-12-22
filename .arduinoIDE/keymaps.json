@@ -1,0 +1,10 @@
+[
+  {
+    "command": "workbench.action.showCommands",
+    "keybinding": "ctrl+alt+cmd+p"
+  },
+  {
+    "command": "-workbench.action.showCommands",
+    "keybinding": "ctrlcmd+shift+p"
+  }
+]

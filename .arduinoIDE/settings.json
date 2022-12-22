@@ -1,0 +1,22 @@
+{
+  "editor.fontSize": 12,
+  "workbench.colorTheme": "arduino-theme",
+  "files.autoSave": "afterDelay",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "arduino.window.autoScale": true,
+  "arduino.window.zoomLevel": 0,
+  "arduino.compile.verbose": false,
+  "arduino.compile.warnings": "All",
+  "arduino.upload.verbose": false,
+  "arduino.upload.verify": false,
+  "arduino.sketchbook.showAllFiles": false,
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "arduino.cloud.enabled": false,
+  "arduino.board.certificates": "arduino.cc:443",
+  "window.zoomLevel": 0,
+}
