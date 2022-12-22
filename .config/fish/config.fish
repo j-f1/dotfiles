@@ -50,6 +50,11 @@ else
   set -gx fish_nesting_level 0
 end
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
 # Startup performance
 set delta_t (math (gdate "+%s%3N") - $start_time)
 
