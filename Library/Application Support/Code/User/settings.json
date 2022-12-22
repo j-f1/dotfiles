@@ -1,6 +1,5 @@
 {
   "editor.minimap.enabled": false,
-  "workbench.editor.highlightModifiedTabs": true,
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace, SF Pro Text",
   "editor.fontLigatures": "'zero', 'onum', 'ss04' /* $ */, 'ss06' /* \\ */",
   "window.autoDetectColorScheme": true,
@@ -9,24 +8,27 @@
   "files.associations": {
     ".netlify.toml": "toml",
     ".njk": "html",
-    ".69": "xml"
+    "*.webc": "html",
+    ".69": "xml",
+    "Procfile.*": "procfile"
   },
   "terminal.integrated.commandsToSkipShell": [
     "workbench.action.nextEditorInGroup",
     "workbench.action.previousEditorInGroup"
   ],
   "terminal.integrated.env.osx": {
-    "EDITOR": "code -rw",
+    "EDITOR": "code-insiders -rw",
     "TERM_PROGRAM": "vscode",
     "FIG_NEW_SESSION": "1"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.inlayHints.enabled": "offUnlessPressed"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.inlayHints.enabled": "offUnlessPressed"
   },
-  "terminal.integrated.shell.linux": "/usr/bin/fish",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
@@ -38,7 +40,7 @@
   },
   "search.globalFindClipboard": true,
   "editor.renderLineHighlightOnlyWhenFocus": true,
-  "customizeUI.activityBar": "bottom",
+  "customizeUI.activityBar": "top",
   "customizeUI.titleBar": "inline",
   "customizeUI.stylesheet": {
     // ".notifications-center [title*='Hide Notifications']::before": "content: '\\ea76' !important;"
@@ -56,8 +58,13 @@
     //   "[aria-label='Remote Host']": "display: none !important",
     //   // ".monaco-workbench .part.statusbar.part.statusbar": "top: 0 !important; position: fixed !important; height: var(--traffic-lights-height) !important; background: transparent !important; color: inherit !important;",
     //   // ".nosidebar .part.editor": "top: -28px",
+    ".quick-input-widget": "top: var(--traffic-lights-height) !important",
     ".nosidebar .part.statusbar": "padding-left: calc(3px + var(--traffic-lights-width));",
-    ".part.statusbar": "padding: 0 7px; padding-left: calc(3px + var(--traffic-lights-width)); -webkit-app-region: drag; outline: none !important",
+    ".part.statusbar": "padding: 0 7px; padding-left: calc(3px + var(--traffic-lights-width)); -webkit-app-region: drag; outline: none !important; position: absolute; z-index: 10000000; box-shadow: 0 1px 0 var(--notebook-selected-cell-border-color) !important",
+    ".tabs-and-actions-container, .part.activitybar, .tabs-breadcrumbs, .part.sidebar > .title, .pane-header.expanded": "border-bottom: 1px solid var(--notebook-selected-cell-border-color)",
+    ".pane-header": "border-top: 1px solid var(--notebook-selected-cell-border-color)",
+    ".part.sidebar.left, .part.activitybar": "border-right: 1px solid var(--notebook-selected-cell-border-color)",
+    ".part.activitybar .monaco-action-bar .action-label": "border-radius: 0",
     //   // ".statusbar-item, .statusbar-item": "padding-top: 7px; padding-bottom: 7px; height: calc(100% - 14px) !important; -webkit-app-region: no-drag;",
     //   // ".statusbar-item a:hover, .statusbar-item a:focus": "border-radius: 5px; background: var(--background-highlight) !important;",
     //   ".monaco-workbench .part.statusbar>.items-container>.statusbar-item.right.last-visible-item": "padding-right: 0 !important;",
@@ -70,12 +77,29 @@
     //   ".sidebar .composite.title[style*='rgb(234, 234, 235)']": "background: #f3f3f3 !important",
     //   ".sidebar .composite.title[style*='rgb(33, 37, 43)']": "background: #252526 !important"
     // fixes for insiders
+    ".statusbar-item > a": "margin-inline: 0 !important",
     ".activitybar": "width: auto !important",
+    ".activitybar .composite-bar": "margin-left: 0 !important",
     ".monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .action-label": "width: 38px; height: 38px !important",
     ".monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .action-item.checked .active-item-indicator:before": "border-left: none; border-bottom: 2px solid currentColor !important; width: 100% !important; height: 0 !important; bottom: 0",
     ".actions-container": "justify-content: space-evenly",
     ".monaco-workbench .activitybar>.content :not(.monaco-menu)>.monaco-action-bar .badge .badge-content": "top: 2px !important; right: 2px !important",
-    "[class=\"split-view-view visible\"][style=\"top: 0px; height: 28px;\"]": "display: none"
+    "[class=\"split-view-view visible\"][style=\"top: 0px; height: 28px;\"]": "display: none",
+    ".editor-group-letterpress": "background-image: none !important",
+    ".editor-group-letterpress::before, .editor-group-letterpress::after": "content: '𐚱𒄳'; font-size: 200px; position: absolute; top: 50%; left: 50%; opacity: 0.5; height: 1em",
+    ".editor-group-letterpress::before": "transform: translate(-50%, -50%);",
+    ".editor-group-letterpress::after": "transform: translate(-49.2%, -48.5%); mix-blend-mode: screen; opacity: 0.5",
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab>.tab-actions .action-label": "opacity: 1",
+    "[title*='Show Revision Commit'].action-label, [title*='Open Changes with Previous Revision'].action-label, [title*='Open Changes with Next Revision'].action-label": "display: none !important",
+    ".vs": "font-feature-settings: 'ss06'",
+    ".mac": "font-family: SF Pro, -apple-system, BlinkMacSystemFont, sans-serif",
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab .tab-label": "line-height: 28px; height: 28px",
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab, .monaco-workbench .part.editor>.content .editor-group-container>.title .editor-actions, .monaco-workbench .part.editor>.content .editor-group-container>.title .monaco-icon-label:before, .tabs-and-actions-container": "height: 28px",
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.tab-actions-left .action-label": "transform: scale(0.8); margin-right: 0 !important; justify-content: center;",
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab>.tab-actions>.monaco-action-bar, .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab>.tab-actions": "width: 15px",
+    "[id='status.editor.selection']": "font-variant-numeric: tabular-nums",
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.tab-actions-left": "padding-right: 6px; padding-left: 2px",
+    ".tabs-and-actions-container > .editor-actions": "padding-right: 0 !important"
   },
   "liveshare.showInStatusBar": "whileCollaborating",
   "[jsonc]": {
@@ -86,14 +110,14 @@
   },
   "git.enableSmartCommit": true,
   "workbench.colorTheme": "Atom One Light",
-  "editor.renderWhitespace": "none",
+  "editor.renderWhitespace": "all",
   "editor.wordWrap": "on",
   "editor.copyWithSyntaxHighlighting": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.foldingHighlight": false,
   "editor.inlineHints.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.linkedEditing": true,
-  "editor.renderFinalNewline": false,
+  "editor.renderFinalNewline": "off",
   "editor.renderControlCharacters": true,
   "editor.scrollBeyondLastLine": false,
   "editor.wrappingIndent": "indent",
@@ -116,7 +140,6 @@
   "workbench.fontAliasing": "auto",
   "workbench.tree.renderIndentGuides": "always",
   "workbench.view.alwaysShowHeaderActions": true,
-  "workbench.editor.decorations.badges": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.editor.tabCloseButton": "left",
@@ -150,17 +173,14 @@
   "zenMode.silentNotifications": false,
   "terminal.integrated.inheritEnv": false,
   "python.formatting.provider": "black",
-  "editor.formatOnSave": true,
   "inline-parameters.fontStyle": "normal",
   "inline-parameters.hideSingleParameters": true,
   "customizeUI.statusBarPosition": "top",
   "[ocaml]": {
     "editor.defaultFormatter": "ocamllabs.ocaml-platform"
   },
-  "python.insidersChannel": "daily",
   "editor.formatOnPaste": true,
-  "sourcekit-lsp.serverPath": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
-  "sde.languageServerMode": "sourcekit-lsp",
+  "sourcekit-lsp.serverPath": "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
   "[swift]": {
     "editor.defaultFormatter": "vknabel.vscode-swiftformat"
   },
@@ -169,7 +189,12 @@
     "jupyter-notebook": "left"
   },
   "editor.largeFileOptimizations": false,
-  "inline-parameters.enabled": false,
+  "inline-parameters.enabled": true,
+  "terminal.integrated.profiles.linux": {
+    "fish": {
+      "path": "fish"
+    }
+  },
   "terminal.integrated.profiles.osx": {
     "bash": {
       "path": "bash",
@@ -190,38 +215,190 @@
       "icon": "terminal-powershell"
     }
   },
-  "window.titleBarStyle": "native",
   "prettier.requireConfig": true,
   "[racket]": {
     "editor.defaultFormatter": "evzen-wybitul.magic-racket"
   },
-  "[markdown]": {
+  "[markdown][mdx]": {
+    "editor.fontFamily": "Merriweather",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.5,
     "editor.wordWrap": "on",
-    "editor.quickSuggestions": false,
-    "files.trimTrailingWhitespace": false
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "files.trimTrailingWhitespace": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.userWords": [
-    "ADOCH",
+    "11tydata",
+    "anonymization",
+    "anonymized",
+    "anonymizing",
+    "browndailyherald",
     "camelcase",
+    "caser",
+    "codicon",
+    "Conde",
+    "convolutional",
+    "CSCI",
+    "CSSOM",
+    "Deallocator",
+    "debuggability",
+    "deleter",
     "eleventy",
-    "Fordham",
+    "elrod",
+    "emscripten",
+    "epipolar",
+    "excalidraw",
+    "grayscale",
+    "hastscript",
+    "instanceof",
+    "jedfox",
+    "jsxs",
+    "Lightbox",
     "listify",
+    "lowercased",
+    "lowercasing",
     "MDAST",
+    "Merriweather",
+    "NAMECHEAP",
+    "Nast",
+    "neeva",
+    "noreply",
     "Nuxt",
+    "ONESHOT",
+    "pagedjs",
+    "pagefind",
     "parens",
+    "pnpm",
+    "prettierignore",
+    "prettierrc",
+    "purgecss",
+    "Pyret",
+    "readdirp",
     "rehype",
+    "secnum",
+    "seti",
+    "Shortcode",
+    "shortcodes",
+    "sindresorhus",
+    "subfolders",
     "subheaders",
-    "SUNY",
+    "tokamak",
+    "typedefs",
     "uniqid",
-    "unist"
+    "uniquing",
+    "unist",
+    "Unkeyed",
+    "uppercasing",
+    "Vercel",
+    "vfile",
+    "webfont",
+    "webfonts",
+    "webidl",
+    "webref",
+    "wireframe"
   ],
   "editor.accessibilitySupport": "off",
-  "workbench.productIconTheme": "sf-symbol-icons",
   "editor.unicodeHighlight.allowedCharacters": {
     "’": true
-  }
+  },
+  "swiftlint.path": "/opt/homebrew/bin/swiftlint",
   "terminal.integrated.automationProfile.osx": {
-    "path": "zsh"
+    "path": "/bin/zsh",
+    "args": ["--rcs"]
   },
   "terminal.integrated.defaultProfile.osx": "fish",
+  "license.default": "mit",
+  "license.extension": ".md",
+  "problems.decorations.enabled": false,
+  "deno.path": "/Users/jed/.asdf/shims/deno",
+  "editor.formatOnSave": true,
+  "swiftformat.path": "/opt/homebrew/bin/swiftformat",
+  "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm",
+  "gitlens.defaultTimeFormat": null,
+  "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
+  "editor.scrollbar.vertical": "visible",
+  "editor.overviewRulerBorder": false,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "git.enableCommitSigning": true,
+  "terminal.integrated.enableShellIntegration": true,
+  "explorer.experimental.fileNesting.enabled": true,
+  "cSpell.showStatus": false,
+  "cSpell.suggestionMenuType": "quickFix",
+  "editor.inlineSuggest.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
+  },
+  "workbench.editor.untitled.labelFormat": "name",
+  "backAndForwardButtons.backText": "􀯶",
+  "backAndForwardButtons.forwardText": "􀯻",
+  "json.maxItemsComputed": 500000,
+  "editor.foldingMaximumRegions": 65000,
+  "sde.buildOnSave": false,
+  "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+  "workbench.editor.defaultBinaryEditor": "hexEditor.hexedit",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+  "data.preview.theme": "light",
+  "explorer.experimental.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
+  },
+  "[njk]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "svelte.enable-ts-plugin": true,
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "workbench.colorCustomizations": {
+    "editorInlayHint.typeBackground": "#0000",
+    "editorInlayHint.typeForeground": "#79a9"
+  },
+  "liveshare.presence": false,
+  "editor.renderLineHighlight": "none",
+  "gitlens.currentLine.enabled": false,
+  "python.defaultInterpreterPath": "/Users/jed/.asdf/installs/python/3.10.5/bin/python3.10",
+  "security.workspace.trust.untrustedFiles": "open",
+  "npm.keybindingsChangedWarningShown": true,
+  "window.titleBarStyle": "native",
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "svg.preview.mode": "svg",
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "hexeditor.columnWidth": 16,
+  "hexeditor.showDecodedText": true,
+  "hexeditor.defaultEndianness": "little",
+  "hexeditor.inspectorType": "aside",
+  "terminal.integrated.macOptionClickForcesSelection": true,
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.remotePlatform": {
+    "jeds-mini.local": "macOS"
+  }
 }
