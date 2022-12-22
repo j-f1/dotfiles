@@ -1,1 +1,3 @@
-# . /usr/local/opt/asdf/asdf.sh
+PATH=/opt/homebrew/bin:$PATH
+
+. /opt/homebrew/opt/asdf/asdf.sh
