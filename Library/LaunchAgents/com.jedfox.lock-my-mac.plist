@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Disabled</key>
+	<false/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/opt/homebrew/Caskroom/miniforge/base/bin:/opt/homebrew/Caskroom/miniforge/base/condabin:/Users/jed/.swiftenv/shims:/Users/jed/.asdf/shims:/opt/homebrew/Cellar/asdf/0.9.0/libexec/bin:/opt/homebrew/bin:/usr/sbin:/Users/jed/.fig/bin:/Users/jed/.yarn/bin:/Users/jed/.local/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/VMware Fusion Tech Preview.app/Contents/Public:/Applications/Racket v7.3/bin:/Applications/Wireshark.app/Contents/MacOS</string>
+		<key>PWD</key>
+		<string>/Users/jed/Documents/github-clones/lock-my-mac</string>
+	</dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.jedfox.lock-my-mac</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/local/bin/fdautil</string>
+		<string>exec</string>
+		<string>/Users/jed/Documents/github-clones/lock-my-mac/startup.sh</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/tmp/com.jedfox.lock-my-mac.stderr</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/com.jedfox.lock-my-mac.stdout</string>
+	<key>WorkingDirectory</key>
+	<string>/Users/jed/Documents/github-clones/lock-my-mac/</string>
+</dict>
+</plist>
