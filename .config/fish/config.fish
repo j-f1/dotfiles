@@ -27,57 +27,6 @@ if [ $PWD = $HOME ] && [ -d Documents/github-clones ]
   cd Documents/github-clones
 end
 
-##################
-# shell fallback #
-##################
-# run npx or brew by default when a command isn’t found
-# (result of npx --shell-auto-fallback and brew command-not-found-init)
-function __fish_command_not_found_on_interactive --on-event fish_prompt
-  functions --erase __fish_command_not_found_handler
-  functions --erase __fish_command_not_found_setup
-
-  function __fish_command_not_found_handler --on-event fish_command_not_found
-    if which npx > /dev/null
-        echo "$argv[1] not found. Trying with npx..." >&2
-    else
-        return 127
-    end
-    if string match -q -r @ $argv[1]
-        npx $argv
-    else
-        npx --no-install $argv
-        if [ $status -eq 127 ]
-            # brew command-not-found
-            set -l cmd $argv[1]
-            set -l txt (brew which-formula --explain $cmd ^ /dev/null)
-
-            if test -z "$txt"
-                __fish_default_command_not_found_handler $cmd
-            else
-                # https://github.com/fish-shell/fish-shell/issues/159
-                for var in $txt
-                    echo $var
-                end
-            end
-        end
-    end
-  end
-
-  functions --erase __fish_command_not_found_on_interactive
-end
-
-#######
-# rvm #
-#######
-## rvm default &
-
-#########
-# pyenv #
-#########
-# if command -v pyenv 1>/dev/null 2>&1
-#   pyenv init - | source
-# end
-
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [ -f /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish ]; and . /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish
