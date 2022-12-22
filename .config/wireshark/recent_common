@@ -1,4 +1,4 @@
-# Common recent settings file for Wireshark 3.2.7.
+# Common recent settings file for Wireshark 4.0.2.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -6,12 +6,19 @@
 
 ######## Recent capture files (latest last), cannot be altered through command line ########
 
+recent.capture_file: /Users/jed/Desktop/minecraft.pcapng
 
 ######## Recent capture filters (latest last), cannot be altered through command line ########
 
+recent.capture_filter: dst host 2607:f740:f::684
+recent.capture_filter: port 10000
+recent.capture_filter.en0: dst host 2607:f740:f::684
+recent.capture_filter.en0: port 10000
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
 
+recent.display_filter: tcp.stream eq 0
+recent.display_filter: tls
 recent.display_filter: http
 
 # Main window geometry.
@@ -19,7 +26,7 @@ recent.display_filter: http
 gui.geometry_main_x: 49
 gui.geometry_main_y: 50
 gui.geometry_main_width: 1425
-gui.geometry_main_height: 608
+gui.geometry_main_height: 838
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).
@@ -48,9 +55,9 @@ gui.geometry_status_wlan_stats_pane: 200
 # TRUE or FALSE (case-insensitive).
 privs.warn_if_elevated: TRUE
 
-# Warn if npf.sys isn't loaded on Windows >= 6.0.
+# Warn if Wireshark is unable to capture.
 # TRUE or FALSE (case-insensitive).
-privs.warn_if_no_npf: TRUE
+sys.warn_if_no_capture: TRUE
 
 # Find packet search in.
 # One of: PACKET_LIST, PACKET_DETAILS, PACKET_BYTES
@@ -68,6 +75,42 @@ gui.search_case_sensitive: FALSE
 # One of: DISPLAY_FILTER, HEX_VALUE, STRING, REGEX
 gui.search_type: DISPLAY_FILTER
 
+# Geometry and maximized state of FollowStreamDialog window.
+# Decimal integers.
+gui.geom.FollowStreamDialog.x: 276
+gui.geom.FollowStreamDialog.y: 38
+gui.geom.FollowStreamDialog.width: 950
+gui.geom.FollowStreamDialog.height: 838
+# TRUE or FALSE (case-insensitive).
+gui.geom.FollowStreamDialog.maximized: FALSE
+
+# Geometry and maximized state of PreferencesDialog window.
+# Decimal integers.
+gui.geom.PreferencesDialog.x: 422
+gui.geom.PreferencesDialog.y: 231
+gui.geom.PreferencesDialog.width: 680
+gui.geom.PreferencesDialog.height: 521
+# TRUE or FALSE (case-insensitive).
+gui.geom.PreferencesDialog.maximized: FALSE
+
+# Geometry and maximized state of DecodeAsDialog window.
+# Decimal integers.
+gui.geom.DecodeAsDialog.x: 376
+gui.geom.DecodeAsDialog.y: 227
+gui.geom.DecodeAsDialog.width: 750
+gui.geom.DecodeAsDialog.height: 460
+# TRUE or FALSE (case-insensitive).
+gui.geom.DecodeAsDialog.maximized: FALSE
+
+# Geometry and maximized state of WlanStatisticsDialog window.
+# Decimal integers.
+gui.geom.WlanStatisticsDialog.x: 181
+gui.geom.WlanStatisticsDialog.y: 114
+gui.geom.WlanStatisticsDialog.width: 1140
+gui.geom.WlanStatisticsDialog.height: 456
+# TRUE or FALSE (case-insensitive).
+gui.geom.WlanStatisticsDialog.maximized: FALSE
+
 # Geometry and maximized state of FilterDialog window.
 # Decimal integers.
 gui.geom.FilterDialog.x: 287
@@ -76,6 +119,15 @@ gui.geom.FilterDialog.width: 950
 gui.geom.FilterDialog.height: 405
 # TRUE or FALSE (case-insensitive).
 gui.geom.FilterDialog.maximized: FALSE
+
+# Geometry and maximized state of ExpertInfoDialog window.
+# Decimal integers.
+gui.geom.ExpertInfoDialog.x: 334
+gui.geom.ExpertInfoDialog.y: 50
+gui.geom.ExpertInfoDialog.width: 855
+gui.geom.ExpertInfoDialog.height: 608
+# TRUE or FALSE (case-insensitive).
+gui.geom.ExpertInfoDialog.maximized: FALSE
 
 # Geometry and maximized state of EnabledProtocolsDialog window.
 # Decimal integers.
@@ -86,14 +138,14 @@ gui.geom.EnabledProtocolsDialog.height: 595
 # TRUE or FALSE (case-insensitive).
 gui.geom.EnabledProtocolsDialog.maximized: FALSE
 
-# Geometry and maximized state of ExpertInfoDialog window.
+# Geometry and maximized state of PacketDialog window.
 # Decimal integers.
-gui.geom.ExpertInfoDialog.x: 334
-gui.geom.ExpertInfoDialog.y: 50
-gui.geom.ExpertInfoDialog.width: 855
-gui.geom.ExpertInfoDialog.height: 608
+gui.geom.PacketDialog.x: 181
+gui.geom.PacketDialog.y: 121
+gui.geom.PacketDialog.width: 1140
+gui.geom.PacketDialog.height: 670
 # TRUE or FALSE (case-insensitive).
-gui.geom.ExpertInfoDialog.maximized: FALSE
+gui.geom.PacketDialog.maximized: FALSE
 
 # Custom colors.
 # List of custom colors selected in Qt color picker.
