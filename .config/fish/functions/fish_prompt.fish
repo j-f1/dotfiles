@@ -1,5 +1,5 @@
 function fish_prompt
-	if [ "$TERM_PROGRAM" = "Apple_Terminal" ]
+	if [ "$TERM_PROGRAM" = "Apple_Terminal" ] || [ "$TERM_PROGRAM" = "vscode" ]
 		set_color bbb
 		echo -n (string repeat -n "$fish_nesting_level" '█')
 		set_color normal
