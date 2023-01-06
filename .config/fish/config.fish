@@ -27,10 +27,6 @@ if [ $PWD = $HOME ] && [ -d Documents/github-clones ]
   cd Documents/github-clones
 end
 
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[ -f /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish ]; and . /Users/hayfields/.config/yarn/global/node_modules/tabtab/.completions/electron-forge.fish
-
 ########
 # asdf #
 ########
