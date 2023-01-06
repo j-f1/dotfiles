@@ -30,7 +30,11 @@ end
 ########
 # asdf #
 ########
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+# source /opt/homebrew/opt/asdf/libexec/asdf.fish
+function __autocreate_envrc --on-event fish_prompt
+  autocreate_envrc &
+end
+
 
 ############
 # swiftenv #
