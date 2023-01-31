@@ -7,7 +7,7 @@
   "autocomplete.developerModeNPM": false,
   "autocomplete.developerModeNPMInvalidateCache": false,
   "autocomplete.disable": false,
-  "autocomplete.firstTokenCompletion": true,
+  "autocomplete.firstTokenCompletion": false,
   "autocomplete.fontFamily": "Fira Code",
   "autocomplete.fuzzySearch": true,
   "autocomplete.immediatelyExecuteAfterSpace": true,
